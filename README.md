@@ -1,14 +1,14 @@
-# portfolio-com-angular
+# Objetivo do Projeto
 
 Objetivo do projeto
 
 # Deploy - GitHub Pages
 
-link
+Link - 
 
 # Protótipo - Figma
 
-link - https://www.figma.com/file/xBBTySFY708uQqzSvsUSS3/portfolio?node-id=0%3A1
+Link - https://www.figma.com/file/xBBTySFY708uQqzSvsUSS3/portfolio?node-id=0%3A1
 
 # Checklist
 
