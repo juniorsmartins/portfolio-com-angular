@@ -8,7 +8,7 @@ link
 
 # Protótipo - Figma
 
-link - https://www.figma.com/file/xBBTySFY708uQqzSvsUSS3/Untitled?node-id=0%3A1 
+link - https://www.figma.com/file/xBBTySFY708uQqzSvsUSS3/portfolio?node-id=0%3A1
 
 # Checklist
 
