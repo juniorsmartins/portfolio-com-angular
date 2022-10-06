@@ -1,5 +1,5 @@
 .cabecalho {
-    background: url(/assets/imagens/fundo-cabecalho.png);
+    background: url(/assets/imagens/fundo-cabecalho2.jpg);
     background-size: cover;
     display: flex;
     align-items: center;
@@ -43,4 +43,3 @@
       display: none;
     }
   }
-  
