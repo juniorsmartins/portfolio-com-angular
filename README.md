@@ -1,18 +1,20 @@
-# Objetivo do Projeto
+# 1. Projeto
 
-Objetivo do projeto
+O projeto consiste em uma atividade avaliativa para a disciplina "Frameworks Web", do curso de Pós-graduação Lato Sensu (especialização) em Tecnologia Java, ofertado pela Universidade Tecnológica Federal do Paraná (UTFPR). Logo, é construído para atender aos requisitos elencados pelo professor da disciplina. E, nessa linha, será uma aplicação para "Gerenciamento de cursos/certificados" de portfólio profissional. 
 
-# Deploy - GitHub Pages
+## Deploy - GitHub Pages
 
 ~~~
 Link - 
 ~~~
 
-# Protótipo - Figma
+## Protótipo - Figma
 
+~~~
 Link - https://www.figma.com/file/xBBTySFY708uQqzSvsUSS3/portfolio?node-id=0%3A1
+~~~
 
-# Checklist
+## Checklist
 
 1. Criar o repositório no GitHub com a estrutura do Gitflow, ou seja, branches main e develop;
 2. Usar componentes de algum framework CSS (Bootstrap, Materialize ou outro);
