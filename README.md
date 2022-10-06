@@ -4,15 +4,11 @@ O projeto consiste em uma atividade avaliativa para a disciplina "Frameworks Web
 
 ## Deploy - GitHub Pages
 
-~~~
 Link - 
-~~~
 
 ## Protótipo - Figma
 
-~~~
 Link - https://www.figma.com/file/xBBTySFY708uQqzSvsUSS3/portfolio?node-id=0%3A1
-~~~
 
 ## Checklist
 
