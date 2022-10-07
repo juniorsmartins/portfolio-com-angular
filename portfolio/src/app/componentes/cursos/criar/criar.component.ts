@@ -7,6 +7,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CriarComponent implements OnInit {
 
+  criarAtividade2 = {
+    id: '1',
+    resultado:'resultado'
+  }
+
   constructor() { }
 
   ngOnInit(): void {
