@@ -11,20 +11,25 @@ export class CriarComponent implements OnInit {
   valor: number | undefined;
 
   somar1ate100() {
+    this.atividade1.somatotal = 0;
+
     console.log('---- calculando... ----');
 
-    var somaTotal = 0;
+    var total = 0;
     for (let contador = 1; contador <= 100; contador++) {
-      somaTotal += contador;
-      console.log(somaTotal);
+      total += contador;
+      console.log(total);
     }
+    this.atividade1.somatotal = total;
 
     console.log('---- concluído ----');
   }
 
   atividade1 = {
     resultado:'RESULTADO 1:',
-    subtitulo:'clique F12 e veja no console.'
+    subtitulo1:'Total da soma',
+    subtitulo2:'Obs: caso queira ver o cálculo, clique F12 para ver no console.',
+    somatotal: 0
   }
 
   calcularNumeroDeNotasPorValor() {

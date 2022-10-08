@@ -11,12 +11,15 @@
 
       <form class="form" action="" (ngSubmit)="somar1ate100()">
         <label for="somar">-> Somar valores de 1 até 100</label>
-        <button id="somar" type="submit" class="botao" onClick="somar1ate100()">SOMAR</button>
+        <button id="somar" type="submit" class="botao" >SOMAR</button>
       </form>
 
       <div class="modelo modelo1 ff-roboto-mono">
         <p class="resultado">{{ atividade1.resultado }}</p>
-        <p class="resultado">{{ atividade1.subtitulo }}</p>
+        <p class="resultado"> {{ atividade1.subtitulo1 }} </p>
+
+        <input id="somaTotal" type="text" [(ngModel)]="atividade1.somatotal">
+        <p class="resultado">{{ atividade1.subtitulo2 }}</p>
       </div>
     </article>
 
@@ -27,7 +30,7 @@
         <label>-> Caixa Eletrônico</label>
         <label for="valor">Informe o valor do saque:</label>
         <input id="valor" type="text" class="input" placeholder="digite o valor" [(ngModel)]="valor" name="valor" >
-        <button id="botao-a2" type="submit" class="botao" onClick="calcularNumeroDeNotasPorValor()">SACAR</button>
+        <button id="botao-a2" type="submit" class="botao" >SACAR</button>
       </form>
 
       <div class="modelo modelo1 ff-roboto-mono">
