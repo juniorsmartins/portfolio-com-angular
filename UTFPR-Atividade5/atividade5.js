@@ -1,12 +1,8 @@
-function startPage() {
-    console.log("Bem-vindo!")
-}
-startPage();
+const tipoGasolina = 'GASOLINA';
+const tipoEtanol = 'ETANOL';
+const parametroDaVantagem = 0.7;
 
 class Posto {
-    nome: String;
-    gasolina: String;
-    etanol: String;
 
     constructor(nome, gasolina, etanol) {
         this._nome = nome;
@@ -15,7 +11,20 @@ class Posto {
     }
 
     sugereCombustivel() {
+        var sugestaoDeCombustivel;
+        let porcentagem = this._etanol._preco / this._gasolina._preco;
 
+        if(porcentagem < parametroDaVantagem) {
+            sugestaoDeCombustivel = tipoEtanol;
+        } else {
+            sugestaoDeCombustivel = tipoGasolina;
+        }
+
+        return `\n TABELA DE PREÇOS DE COMBUSTÍVEIS \n 
+            Gasolina: ${this._gasolina._preco} \n 
+            Etanol: ${this._etanol._preco} \n
+            Porcentagem: ${porcentagem} \n
+            Combustível vantajoso: ${sugestaoDeCombustivel} \n`;
     }
 
     get nome() {
@@ -44,70 +53,36 @@ class Posto {
 }
 
 class Combustivel {
-    tipo: String;
-    preco: Number;
 
-    constructor(tipo, preco) {
+    constructor(tipo, preco = 0.0) {
         this._tipo = tipo;
+        this._preco = preco;
+    }
+
+    get tipo() {
+        return this._tipo;
+    }
+
+    set tipo(tipo) {
+        this._tipo = tipo;
+    }
+
+    get preco() {
+        return this._preco;
+    }
+
+    set preco(preco) {
         this._preco = preco;
     }
 }
 
+function startMain() {
 
+    var gasolina = new Combustivel(tipoGasolina, 6.799);
+    var etanol = new Combustivel(tipoEtanol, 5.299);
+    var posto = new Posto('Posto Ipiranga', gasolina, etanol);
 
-
-
-var botaoPegarValor = document.querySelector("#btnPegarValor");
-
-botaoPegarValor.addEventListener("click", function(event) {
-    event.preventDefault();
-
-    let formulario = document.querySelector("#formulario-valor");
-    console.log(formulario.valor.value);
-    calcularNumeroDeNotasPorValor(formulario.valor.value);
-})
-
-function calcularNumeroDeNotasPorValor(valorDeSaque) {
-
-    let umReal = 0;
-    let doisReais = 0;
-    let cincoReais = 0;
-    let dezReais = 0;
-    let vinteReais = 0;
-    let cinquentaReais = 0;
-    let cemReais = 0;
-
-    while (valorDeSaque != null && valorDeSaque >= 1) {
-        if (valorDeSaque >= 100) {
-            valorDeSaque -= 100;
-            cemReais++;
-        } else if (valorDeSaque >= 50) {
-            valorDeSaque -= 50;
-            cinquentaReais++;
-        } else if (valorDeSaque >= 20) {
-            valorDeSaque -= 20;
-            vinteReais++;
-        } else if (valorDeSaque >= 10) {
-            valorDeSaque -= 10;
-            dezReais++;
-        } else if (valorDeSaque >= 5) {
-            valorDeSaque -= 5;
-            cincoReais++;
-        } else if (valorDeSaque >= 2) {
-            valorDeSaque -= 2;
-            doisReais++;
-        } else if (valorDeSaque = 1) {
-            valorDeSaque -= 1;
-            umReal++;
-        }
-    }
-
-    document.getElementById("um").innerHTML = "R$ 1,00: " + umReal;
-    document.getElementById("dois").innerHTML = "R$ 2,00: " + doisReais;
-    document.getElementById("cinco").innerHTML = "R$ 5,00: " + cincoReais;
-    document.getElementById("dez").innerHTML = "R$ 10,00: " + dezReais;
-    document.getElementById("vinte").innerHTML = "R$ 20,00: " + vinteReais;
-    document.getElementById("cinquenta").innerHTML = "R$ 50,00: " + cinquentaReais;
-    document.getElementById("cem").innerHTML = "R$ 100,00: " + cemReais;
+    console.log(posto.sugereCombustivel());
 }
 
+startMain();
