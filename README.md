@@ -1,12 +1,12 @@
 # 1. Projeto
 
-O projeto consiste em uma atividade avaliativa para a disciplina "Frameworks Web", do curso de Pós-graduação Lato Sensu (especialização) em Tecnologia Java, ofertado pela Universidade Tecnológica Federal do Paraná (UTFPR). Logo, é construído para atender aos requisitos elencados pelo professor da disciplina. E, nessa linha, será uma aplicação para "Gerenciamento de cursos/certificados" de portfólio profissional. 
+O projeto consiste em atividade avaliativa à disciplina "Frameworks Web", ministrada no curso de Pós-graduação Lato Sensu (especialização) em Tecnologia Java da UTFPR (Universidade Tecnológica Federal do Paraná). Logo, é construído para atender aos requisitos elencados pelo professor da disciplina. E, nessa linha, será uma aplicação para "Gerenciamento de cursos/certificados" de portfólio profissional. 
 
 ## Deploy - GitHub Pages
 
 Link - 
 
-## Protótipo - Figma
+## Protótipo das Telas - Figma
 
 Link - https://www.figma.com/file/xBBTySFY708uQqzSvsUSS3/portfolio?node-id=0%3A1
 
