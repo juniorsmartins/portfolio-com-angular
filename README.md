@@ -10,7 +10,7 @@ Link -
 
 Link FigJam - https://www.figma.com/file/xBBTySFY708uQqzSvsUSS3/portfolio?node-id=0%3A1
 
-Link Design - 
+Link Design - https://www.figma.com/file/3tb1IBOZiVJHYP3WLrFlcp/DesignPortfolio?node-id=0%3A1
 
 ## Checklist
 
