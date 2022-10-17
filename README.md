@@ -18,7 +18,7 @@ Link Design - https://www.figma.com/file/3tb1IBOZiVJHYP3WLrFlcp/DesignPortfolio?
 2. Usar componentes de algum framework CSS (Bootstrap, Materialize ou outro);
 3. Apresentar as telas com layout responsivo usando ou não algum framework CSS;
 4. Construir páginas web com o conceito de componentes;
-5. Criar o layout da aplicação com componentes, ou seja, o cabeçalho e rodapé precisam ser componentes;
+[x] - Criar o layout da aplicação com componentes, ou seja, o cabeçalho e rodapé precisam ser componentes;
 6. Usar pelo menos dois tipos de data-binding (Interpolation, Property Binding, Event Binding e Two Way Data Binding);
 7. Passar dados via hierarquia de componentes, ou seja, usando @Input ou @Output;
 8. Mapear componentes à rotas no módulo de rotas;
