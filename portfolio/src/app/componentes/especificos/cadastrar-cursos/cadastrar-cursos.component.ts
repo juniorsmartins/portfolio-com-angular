@@ -11,21 +11,28 @@ export class CadastrarCursosComponent implements OnInit {
 
     chapeus = {
       formulario: 'Formulário',
-      salvar: 'Salvar',
-      limpar: 'Limpar'
+      ficha: 'Ficha'
   }
 
   curso = {
-    titulo: 'Microserviços com Java e Spring',
-    instituicao: 'Alura',
-    horas: 40,
-    link: 'www.etc.com.br'
-
+    titulo: '',
+    instituicao: '',
+    dataConclusao: '',
+    cargaHoraria: 0,
+    link: ''
   }
 
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  salvarCadastroDoCurso() {
+    alert("Curso cadastrado com sucesso!");
+  }
+
+  limparFormularioDoCurso() {
+    alert("Formulário limpo com sucesso!");
   }
 
 }
