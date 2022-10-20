@@ -2,6 +2,8 @@
 
 O projeto consiste em atividade avaliativa à disciplina "Frameworks Web", ministrada no curso de Pós-graduação Lato Sensu (especialização) em Tecnologia Java da UTFPR (Universidade Tecnológica Federal do Paraná). Logo, é construído para atender aos requisitos elencados pelo professor da disciplina. E, nessa linha, será uma aplicação para "Gerenciamento de cursos/certificados" de portfólio profissional. 
 
+O projeto está armazenado na pasta intitulada: Portfolio. Todas as demais pastas não possuem relação direta, pois serviram apenas para estudo de assuntos correlatos.
+
 ## Deploy - GitHub Pages
 
 Link - 
