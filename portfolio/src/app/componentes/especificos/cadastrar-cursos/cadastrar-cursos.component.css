@@ -5,17 +5,21 @@
   align-content: center;
 }
 
+.chapeu {
+  color: #ffffff;
+}
+
 .botao {
   margin: 5px;
-  margin-top: 70px;
+  margin-top: 80px;
   width: 200px;
 }
 
-.cadastrar-cursos {
+.cadastrar {
   padding: 2rem 0;
 }
 
-.cadastrar-cursos form {
+.cadastrar form {
   background: #101010;
 
   border: none;
@@ -27,22 +31,22 @@
   padding: 1rem;
 }
 
-.cadastrar-cursos form label {
+.cadastrar form label {
   color: #ffffff;
   font-weight: bold;
-  margin: 1rem 1rem 1rem 1rem;
+  margin: 1rem;
 }
 
-.cadastrar-cursos form .input {
+.cadastrar form .input {
+  background: #ffffff;
   border: none;
   height: 40px;
   padding: 1rem 2rem;
   border-radius: 20px;
-  margin: 0.5rem 0 2rem;
+  margin: 0.5rem;
 }
 
-
-.cadastrar-cursos form .textarea {
+.cadastrar form .textarea {
   border: none;
   padding: 1rem 2rem;
   border-radius: 20px;
@@ -112,8 +116,7 @@ input[type='radio'] {
   border-radius: 50%;
 }
 
-.custom-radio,
-span {
+.custom-radio,span {
   transition: 0.5s ease;
   color: #154580;
 }

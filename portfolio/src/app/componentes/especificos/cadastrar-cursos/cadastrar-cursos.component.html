@@ -1,4 +1,4 @@
-<section class="container cadastrar-cursos ff-inter">
+<section class="container cadastrar ff-inter">
 
   <link rel="stylesheet" href="cadastrar-cursos.component.css">
   <header class="header">
@@ -6,8 +6,9 @@
   </header>
 
   <main>
-    <form class="form">
-      <h2> {{ chapeus.formulario }} </h2> <!-- Interpolation -->
+
+    <form action="">
+      <h2 class="chapeu"> {{ chapeus.formulario }} </h2> <!-- Interpolation -->
       <label for="titulo"> Titulo:
         <input id="titulo" class="input" type="text" name="modelo-card" placeholder="Digitar nome" [(ngModel)]="curso.titulo"> <!-- Two-way Binding -->
       </label>
@@ -30,7 +31,7 @@
     </form>
     <div class="container cadastrar-cursos ff-inter">
       <form action="">
-        <h2 [textContent]="chapeus.ficha" class="header"></h2> <!-- Property Binding -->
+        <h2 [textContent]="chapeus.ficha" class="chapeu"></h2> <!-- Property Binding -->
         <label for="ficha"> Dados Preenchidos:
           <p type="text"> {{ curso.titulo }} </p> <!-- Interpolation -->
           <p type="text"> {{ curso.instituicao }} </p> <!-- Interpolation -->
