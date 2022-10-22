@@ -1,28 +1,46 @@
-<section class="container criar-cursos ff-inter">
+<section class="container cadastrar ff-inter">
 
+  <link rel="stylesheet" href="cadastrar-cursos.component.css">
   <header class="header">
     <h2>Cadastrar Cursos</h2>
   </header>
 
   <main>
-    <form class="form">
+
+    <form action="">
+      <h2 class="chapeu"> {{ chapeus.formulario }} </h2> <!-- Interpolation -->
       <label for="titulo"> Titulo:
-        <input id="titulo" class="input" type="text" name="modelo-card" placeholder="Digitar nome do curso">
+        <input id="titulo" class="input" type="text" name="modelo-card" placeholder="Digitar nome" [(ngModel)]="curso.titulo"> <!-- Two-way Binding -->
       </label>
       <label for="instituicao"> Instituição:
-        <input id="instituicao" class="input" type="text" name="modelo-card" placeholder="Digitar nome da instituição">
+        <input id="instituicao" class="input" type="text" name="modelo-card" placeholder="Digitar nome" [(ngModel)]="curso.instituicao"> <!-- Two-way Binding -->
       </label>
-      <label for="horas"> Horas:
-        <input id="horas" class="input" type="number" name="modelo-card">
+      <label for="dataConclusao"> Data de Conclusão:
+        <input id="dataConclusao" class="input" type="date" name="modelo-card" [(ngModel)]="curso.dataConclusao"> <!-- Two-way Binding -->
+      </label>
+      <label for="cargaHoraria"> Carga Horária:
+        <input id="cargaHoraria" class="input" type="number" name="modelo-card" [(ngModel)]="curso.cargaHoraria"> <!-- Two-way Binding -->
       </label>
       <label for="linkCertificado"> Link:
-        <input id="linkCertificado" class="input" type="text" name="modelo-card" placeholder="Colar link de registro da certificação">
+        <input id="linkCertificado" class="input" type="text" name="modelo-card" placeholder="Registro do certificado" [(ngModel)]="curso.link"> <!-- Two-way Binding -->
       </label>
       <div>
-        <button class="botao">Salvar</button>
-        <button class="botao">Limpar</button>
+        <button (click)="salvarCadastroDoCurso()" type="button" class="botao">Salvar</button> <!-- Event Binding -->
+        <button (click)="limparFormularioDoCurso()" type="button" class="botao">Limpar</button> <!-- Event Binding -->
       </div>
     </form>
+    <div class="container cadastrar-cursos ff-inter">
+      <form action="">
+        <h2 [textContent]="chapeus.ficha" class="chapeu"></h2> <!-- Property Binding -->
+        <label for="ficha"> Dados Preenchidos:
+          <p type="text"> {{ curso.titulo }} </p> <!-- Interpolation -->
+          <p type="text"> {{ curso.instituicao }} </p> <!-- Interpolation -->
+          <p type="text"> {{ curso.dataConclusao }} </p> <!-- Interpolation -->
+          <p type="text"> {{ curso.cargaHoraria }} </p> <!-- Interpolation -->
+          <p type="text"> {{ curso.link }} </p> <!-- Interpolation -->
+        </label>
+      </form>
+    </div>
   </main>
 
 </section>
