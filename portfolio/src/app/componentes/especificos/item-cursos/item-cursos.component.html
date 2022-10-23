@@ -1,0 +1,26 @@
+<article>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+  <div class="row">
+
+    <div class="card blue-grey darken-1">
+      <div class="card-content white-text">
+        <span class="card-title">Curso</span>
+        <p> {{ curso.titulo }} </p>
+        <p> {{ curso.instituicao }} </p>
+        <p> {{ curso.dataConclusao }} </p>
+        <p> {{ curso.cargaHoraria }} </p>
+        <p> {{ curso.link }} </p>
+      </div>
+      <div class="card-action">
+        <button (click)="editarCadastroDoCurso()" type="button" class="waves-effect waves-light btn-small"> <i class="material-icons">edit</i> </button>
+        <button (click)="deletarCadastroDoCurso()" type="button" class="waves-effect waves-light btn-small"> <i class="material-icons">delete</i> </button>
+      </div>
+    </div>
+
+  </div>
+
+</article>
+
+
+

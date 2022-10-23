@@ -5,7 +5,9 @@
   </header>
 
   <div class="container">
-
+    <div *ngFor="let curso of listaDeCursos">
+      <app-item-cursos [curso]="curso" ></app-item-cursos>
+    </div>
   </div>
 
 </section>

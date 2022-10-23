@@ -8,6 +8,7 @@ import { Atividade7CabecalhoComponent } from './componentes/atividade7-cabecalho
 import { Atividade7RodapeComponent } from './componentes/atividade7-rodape/atividade7-rodape.component';
 import { CadastrarCursosComponent } from './componentes/especificos/cadastrar-cursos/cadastrar-cursos.component';
 import { ListarCursosComponent } from './componentes/especificos/listar-cursos/listar-cursos.component';
+import { ItemCursosComponent } from './componentes/especificos/item-cursos/item-cursos.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { ListarCursosComponent } from './componentes/especificos/listar-cursos/l
     Atividade7CabecalhoComponent,
     Atividade7RodapeComponent,
     CadastrarCursosComponent,
-    ListarCursosComponent
+    ListarCursosComponent,
+    ItemCursosComponent
   ],
   imports: [
     BrowserModule,
