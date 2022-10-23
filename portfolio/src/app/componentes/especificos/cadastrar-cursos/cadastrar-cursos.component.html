@@ -5,32 +5,53 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
 
   <div class="container">
-    <h2 class="white-text">Cadastrar Cursos</h2>
-    <!-- Page Content goes here -->
 
+    <div class="row">
+      <form action="" class="col s12">
+        <h2 class="white-text"> {{ chapeus.formulario }} </h2> <!-- Interpolation -->
 
-    <form action="" class="">
-      <h2 class="white-text"> {{ chapeus.formulario }} </h2> <!-- Interpolation -->
-      <label for="titulo"> Titulo:
-        <input id="titulo" class="" type="text" name="modelo-card" placeholder="Digitar nome" [(ngModel)]="curso.titulo"> <!-- Two-way Binding -->
-      </label>
-      <label for="instituicao"> Instituição:
-        <input id="instituicao" class="" type="text" name="modelo-card" placeholder="Digitar nome" [(ngModel)]="curso.instituicao"> <!-- Two-way Binding -->
-      </label>
-      <label for="dataConclusao"> Data de Conclusão:
-        <input id="dataConclusao" class="" type="date" name="modelo-card" [(ngModel)]="curso.dataConclusao"> <!-- Two-way Binding -->
-      </label>
-      <label for="cargaHoraria"> Carga Horária:
-        <input id="cargaHoraria" class="" type="number" name="modelo-card" [(ngModel)]="curso.cargaHoraria"> <!-- Two-way Binding -->
-      </label>
-      <label for="linkCertificado"> Link:
-        <input id="linkCertificado" class="" type="text" name="modelo-card" placeholder="Registro do certificado" [(ngModel)]="curso.link"> <!-- Two-way Binding -->
-      </label>
-      <div>
-        <button (click)="salvarCadastroDoCurso()" type="button" class="waves-effect waves-light btn-large" routerLink="/listarCursos">Salvar</button> <!-- Event Binding -->
-        <button (click)="limparFormularioDoCurso()" type="button" class="waves-effect waves-light btn-large">Limpar</button> <!-- Event Binding -->
-      </div>
-    </form>
+        <div class="row">
+          <label for="titulo"> Titulo: </label>
+          <div class="input-field col s12">
+            <input id="titulo" class="" type="text" placeholder="Digitar nome" name="modelo-card" [(ngModel)]="curso.titulo"> <!-- Two-way Binding -->
+          </div>
+        </div>
+
+        <div class="row">
+          <label for="instituicao"> Instituição: </label>
+          <div class="input-field col s12">
+            <input id="instituicao" class="" type="text" placeholder="Digitar nome" name="modelo-card" [(ngModel)]="curso.instituicao"> <!-- Two-way Binding -->
+          </div>
+        </div>
+
+        <div class="row">
+          <label for="dataConclusao"> Data de Conclusão: </label>
+          <div class="input-field col s6">
+            <input id="dataConclusao" class="" type="date" name="modelo-card" [(ngModel)]="curso.dataConclusao"> <!-- Two-way Binding -->
+          </div>
+          <label for="cargaHoraria"> Carga Horária: </label>
+          <div class="input-field col s6">
+              <input id="cargaHoraria" class="" type="number" name="modelo-card" [(ngModel)]="curso.cargaHoraria"> <!-- Two-way Binding -->
+          </div>
+        </div>
+
+        <div class="row">
+          <label for="linkCertificado"> Link: </label>
+          <div class="input-field col s12">
+            <input id="linkCertificado" class="" type="text" name="modelo-card" placeholder="Registrar certificado" [(ngModel)]="curso.link"> <!-- Two-way Binding -->
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="input-field col s6">
+            <button (click)="salvarCadastroDoCurso()" type="button" class="waves-effect waves-light btn-large" routerLink="/listarCursos">Salvar</button> <!-- Event Binding -->
+          </div>
+          <div class="input-field col s6">
+            <button (click)="limparFormularioDoCurso()" type="button" class="waves-effect waves-light btn-large">Limpar</button> <!-- Event Binding -->
+          </div>
+        </div>
+      </form>
+    </div>
 
     <div>
       <table class="responsive-table">
