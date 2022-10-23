@@ -27,7 +27,7 @@
         <input id="linkCertificado" class="" type="text" name="modelo-card" placeholder="Registro do certificado" [(ngModel)]="curso.link"> <!-- Two-way Binding -->
       </label>
       <div>
-        <button (click)="salvarCadastroDoCurso()" type="button" class="waves-effect waves-light btn-large">Salvar</button> <!-- Event Binding -->
+        <button (click)="salvarCadastroDoCurso()" type="button" class="waves-effect waves-light btn-large" routerLink="/listarCursos">Salvar</button> <!-- Event Binding -->
         <button (click)="limparFormularioDoCurso()" type="button" class="waves-effect waves-light btn-large">Limpar</button> <!-- Event Binding -->
       </div>
     </form>
@@ -56,9 +56,6 @@
     </div>
 
   </div>
-
-
-
 
 
 
