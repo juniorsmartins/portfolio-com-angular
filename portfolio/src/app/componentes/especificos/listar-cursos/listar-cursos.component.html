@@ -1,0 +1,13 @@
+<section class="black">
+
+  <header class="white-text">
+    <h2>Listar Cursos</h2>
+  </header>
+
+  <div class="container">
+    <div *ngFor="let curso of listaDeCursos">
+      <app-item-cursos [curso]="curso" ></app-item-cursos>
+    </div>
+  </div>
+
+</section>

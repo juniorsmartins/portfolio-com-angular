@@ -1,46 +1,90 @@
-<section class="container cadastrar ff-inter">
+<section class="black">
 
-  <link rel="stylesheet" href="cadastrar-cursos.component.css">
-  <header class="header">
-    <h2>Cadastrar Cursos</h2>
-  </header>
+  <!-- <link rel="stylesheet" href="cadastrar-cursos.component.css"> -->
+  <!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
 
-  <main>
+  <div class="container">
 
-    <form action="">
-      <h2 class="chapeu"> {{ chapeus.formulario }} </h2> <!-- Interpolation -->
-      <label for="titulo"> Titulo:
-        <input id="titulo" class="input" type="text" name="modelo-card" placeholder="Digitar nome" [(ngModel)]="curso.titulo"> <!-- Two-way Binding -->
-      </label>
-      <label for="instituicao"> Instituição:
-        <input id="instituicao" class="input" type="text" name="modelo-card" placeholder="Digitar nome" [(ngModel)]="curso.instituicao"> <!-- Two-way Binding -->
-      </label>
-      <label for="dataConclusao"> Data de Conclusão:
-        <input id="dataConclusao" class="input" type="date" name="modelo-card" [(ngModel)]="curso.dataConclusao"> <!-- Two-way Binding -->
-      </label>
-      <label for="cargaHoraria"> Carga Horária:
-        <input id="cargaHoraria" class="input" type="number" name="modelo-card" [(ngModel)]="curso.cargaHoraria"> <!-- Two-way Binding -->
-      </label>
-      <label for="linkCertificado"> Link:
-        <input id="linkCertificado" class="input" type="text" name="modelo-card" placeholder="Registro do certificado" [(ngModel)]="curso.link"> <!-- Two-way Binding -->
-      </label>
-      <div>
-        <button (click)="salvarCadastroDoCurso()" type="button" class="botao">Salvar</button> <!-- Event Binding -->
-        <button (click)="limparFormularioDoCurso()" type="button" class="botao">Limpar</button> <!-- Event Binding -->
-      </div>
-    </form>
-    <div class="container cadastrar-cursos ff-inter">
-      <form action="">
-        <h2 [textContent]="chapeus.ficha" class="chapeu"></h2> <!-- Property Binding -->
-        <label for="ficha"> Dados Preenchidos:
-          <p type="text"> {{ curso.titulo }} </p> <!-- Interpolation -->
-          <p type="text"> {{ curso.instituicao }} </p> <!-- Interpolation -->
-          <p type="text"> {{ curso.dataConclusao }} </p> <!-- Interpolation -->
-          <p type="text"> {{ curso.cargaHoraria }} </p> <!-- Interpolation -->
-          <p type="text"> {{ curso.link }} </p> <!-- Interpolation -->
-        </label>
+    <div class="row">
+      <form action="" class="col s12">
+        <h2 class="white-text"> {{ chapeus.formulario }} </h2> <!-- Interpolation -->
+
+        <div class="row">
+          <label for="titulo"> Titulo: </label>
+          <div class="input-field col s12">
+            <input id="titulo" class="" type="text" placeholder="Digitar nome" name="modelo-card" [(ngModel)]="curso.titulo"> <!-- Two-way Binding -->
+          </div>
+        </div>
+
+        <div class="row">
+          <label for="instituicao"> Instituição: </label>
+          <div class="input-field col s12">
+            <input id="instituicao" class="" type="text" placeholder="Digitar nome" name="modelo-card" [(ngModel)]="curso.instituicao"> <!-- Two-way Binding -->
+          </div>
+        </div>
+
+        <div class="row">
+          <label for="dataConclusao"> Data de Conclusão: </label>
+          <div class="input-field col s6">
+            <input id="dataConclusao" class="" type="date" name="modelo-card" [(ngModel)]="curso.dataConclusao"> <!-- Two-way Binding -->
+          </div>
+          <label for="cargaHoraria"> Carga Horária: </label>
+          <div class="input-field col s6">
+              <input id="cargaHoraria" class="" type="number" name="modelo-card" [(ngModel)]="curso.cargaHoraria"> <!-- Two-way Binding -->
+          </div>
+        </div>
+
+        <div class="row">
+          <label for="linkCertificado"> Link: </label>
+          <div class="input-field col s12">
+            <input id="linkCertificado" class="" type="text" name="modelo-card" placeholder="Registrar certificado" [(ngModel)]="curso.link"> <!-- Two-way Binding -->
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="input-field col s6">
+            <button (click)="salvarCadastroDoCurso()" type="button" class="waves-effect waves-light btn-large" routerLink="/listarCursos">Salvar</button> <!-- Event Binding -->
+          </div>
+          <div class="input-field col s6">
+            <button (click)="limparFormularioDoCurso()" type="button" class="waves-effect waves-light btn-large">Limpar</button> <!-- Event Binding -->
+          </div>
+        </div>
       </form>
     </div>
-  </main>
+
+    <div>
+      <table class="responsive-table">
+        <thead>
+          <tr>
+            <th class="white-text">Título</th>
+            <th class="white-text">Instituição</th>
+            <th class="white-text">Data de Conclusão</th>
+            <th class="white-text">Carga Horária</th>
+            <th class="white-text">Link do Certificado</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="white-text"> {{ curso.titulo }} </td> <!-- Interpolation -->
+            <td class="white-text"> {{ curso.instituicao }} </td> <!-- Interpolation -->
+            <td class="white-text"> {{ curso.dataConclusao }} </td> <!-- Interpolation -->
+            <td class="white-text"> {{ curso.cargaHoraria }} </td> <!-- Interpolation -->
+            <td class="white-text"> {{ curso.link }} </td> <!-- Interpolation -->
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+  </div>
+
+
+
+
+
+
+
+  <!-- Compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 
 </section>
