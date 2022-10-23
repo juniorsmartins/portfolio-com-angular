@@ -10,7 +10,7 @@ import { Component, OnInit } from '@angular/core';
 export class CadastrarCursosComponent implements OnInit {
 
     chapeus = {
-      formulario: 'Formulário',
+      formulario: 'Formulário de cadastro',
       ficha: 'Ficha'
   }
 
@@ -22,10 +22,9 @@ export class CadastrarCursosComponent implements OnInit {
     link: ''
   }
 
-  constructor() { }
+  constructor() {}
 
-  ngOnInit(): void {
-  }
+  ngOnInit(): void {}
 
   salvarCadastroDoCurso() {
     alert("Curso cadastrado com sucesso!");
