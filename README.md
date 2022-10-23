@@ -2,7 +2,7 @@
 
 O projeto consiste em atividade avaliativa à disciplina "Frameworks Web", ministrada no curso de Pós-graduação Lato Sensu (especialização) em Tecnologia Java da UTFPR (Universidade Tecnológica Federal do Paraná). Logo, é construído para atender aos requisitos elencados pelo professor da disciplina. E, nessa linha, será uma aplicação para "Gerenciamento de cursos/certificados" de portfólio profissional. 
 
-O projeto está armazenado na pasta intitulada: Portfolio. Todas as demais pastas não possuem relação direta, mas serviram para estudo de assuntos correlatos.
+O projeto está armazenado na pasta intitulada: Portfolio. Todas as demais pastas não possuem relação direta, mas serviram para estudo de assuntos correlatos e, por conta disso, foram arquivados conjuntamente.
 
 ## Deploy - GitHub Pages
 
@@ -17,11 +17,11 @@ Link Design - https://www.figma.com/file/3tb1IBOZiVJHYP3WLrFlcp/DesignPortfolio?
 ## Checklist
 
 - [x] Criar o repositório no GitHub com a estrutura do Gitflow, ou seja, branches main e develop;
-- [ ] Usar componentes de algum framework CSS (Bootstrap, Materialize ou outro);
+- [x] Usar componentes de algum framework CSS (Bootstrap, Materialize ou outro);
 - [ ] Apresentar as telas com layout responsivo usando ou não algum framework CSS;
 - [ ] Construir páginas web com o conceito de componentes;
 - [x] Criar o layout da aplicação com componentes, ou seja, o cabeçalho e rodapé precisam ser componentes;
-- [ ] Usar pelo menos dois tipos de data-binding (Interpolation, Property Binding, Event Binding e Two Way Data Binding);
+- [x] Usar pelo menos dois tipos de data-binding (Interpolation, Property Binding, Event Binding e Two Way Data Binding);
 - [ ] Passar dados via hierarquia de componentes, ou seja, usando @Input ou @Output;
 - [ ] Mapear componentes à rotas no módulo de rotas;
 - [ ] Criar navegação entre páginas por meio de rotas;
