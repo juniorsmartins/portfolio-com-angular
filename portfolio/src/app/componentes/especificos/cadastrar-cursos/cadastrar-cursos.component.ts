@@ -10,7 +10,7 @@ import { Component, OnInit } from '@angular/core';
 export class CadastrarCursosComponent implements OnInit {
 
     chapeus = {
-      formulario: 'Formulário de cadastro',
+      formulario: 'Formulário para cadastrar cursos',
       ficha: 'Ficha'
   }
 
