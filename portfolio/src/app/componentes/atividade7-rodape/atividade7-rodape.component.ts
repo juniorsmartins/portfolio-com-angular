@@ -7,7 +7,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class Atividade7RodapeComponent implements OnInit {
 
-  constructor() { }
+  ano: number;
+
+  constructor() {
+    this.ano = new Date().getFullYear();
+  }
 
   ngOnInit(): void {
   }
