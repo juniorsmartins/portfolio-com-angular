@@ -19,6 +19,10 @@ export class ItemCursosComponent implements OnInit {
 
   ngOnInit(): void {}
 
+  larguraCardCurso(): string {
+    return '';
+  }
+
   editarCadastroDoCurso() {
     alert("Curso editado com sucesso!");
   }

@@ -4,10 +4,17 @@
     <h2>Listar Cursos</h2>
   </header>
 
-  <div class="container" *ngIf="listaDeCursos.length > 0">
+  <div class="container" *ngIf="listaDeCursos.length > 0, else semCursos">
     <div *ngFor="let curso of listaDeCursos">
       <app-item-cursos [curso]="curso" ></app-item-cursos>
     </div>
   </div>
 
 </section>
+
+<ng-template #semCursos>
+  <div class="">
+    <p class="white-text">Nenhun curso cadastrado!</p>
+  </div>
+</ng-template>
+
