@@ -19,6 +19,7 @@ export class CadastrarCursosComponent implements OnInit {
     instituicao: '',
     dataConclusao: '',
     cargaHoraria: 0,
+    preco: '',
     link: ''
   }
 
