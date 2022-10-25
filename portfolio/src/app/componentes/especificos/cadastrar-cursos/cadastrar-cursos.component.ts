@@ -32,7 +32,12 @@ export class CadastrarCursosComponent implements OnInit {
   }
 
   limparFormularioDoCurso() {
-    alert("Formulário limpo com sucesso!");
+    this.curso.titulo = '';
+    this.curso.instituicao = '';
+    this.curso.dataConclusao = '';
+    this.curso.cargaHoraria = 0;
+    this.curso.preco = '';
+    this.curso.link = '';
   }
 
 }

@@ -37,8 +37,8 @@
 
         <div class="row">
             <label for="preco"> Preço: </label>
-            <div class="input-field col s3">
-              <input id="preco" class="" type="text" name="modelo-card" [(ngModel)]="curso.preco" mask="separator.2" [thousandSeparator]="'.'" [decimalMarker]="','" prefix="R$ " [dropSpecialCharacters]="true" [showMaskTyped]="false"> <!-- Two-way Binding -->
+            <div class="input-field col">
+              <input id="preco" class="" type="text" name="modelo-card" [(ngModel)]="curso.preco" mask="separator.2" [thousandSeparator]="'.'" [decimalMarker]="','" prefix="R$ " [dropSpecialCharacters]="false" [showMaskTyped]="false"> <!-- Two-way Binding -->
             </div>
         </div>
 
@@ -66,6 +66,7 @@
             <th>Instituição</th>
             <th>Data de Conclusão</th>
             <th>Carga Horária</th>
+            <th>Preço</th>
             <th>Link do Certificado</th>
           </tr>
         </thead>
@@ -75,6 +76,7 @@
             <td> {{ curso.instituicao }} </td> <!-- Interpolation -->
             <td> {{ curso.dataConclusao }} </td> <!-- Interpolation -->
             <td> {{ curso.cargaHoraria }} </td> <!-- Interpolation -->
+            <td> {{ curso.preco }} </td> <!-- Interpolation -->
             <td> {{ curso.link }} </td> <!-- Interpolation -->
           </tr>
         </tbody>
