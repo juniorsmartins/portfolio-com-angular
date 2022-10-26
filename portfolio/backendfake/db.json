@@ -10,33 +10,6 @@
       "link": "http1"
     },
     {
-      "id": 2,
-      "titulo": "Mensageria com RabbitMQ",
-      "instituicao": "Dio",
-      "dataConclusao": "20/08/2021",
-      "cargaHoraria": 8,
-      "preco": "35",
-      "link": "http2"
-    },
-    {
-      "id": 3,
-      "titulo": "Crud com Angular 14",
-      "instituicao": "AlgaWorks",
-      "dataConclusao": "07/07/20",
-      "cargaHoraria": 9,
-      "preco": "62",
-      "link": "http3"
-    },
-    {
-      "titulo": "Formação em linguagem C#",
-      "instituicao": "Fundação Bradesco",
-      "dataConclusao": "2022-10-01",
-      "cargaHoraria": 40,
-      "preco": "R$ 30,01",
-      "link": "qweqweqweqwe",
-      "id": 4
-    },
-    {
       "titulo": "Formação Engenharia de Software",
       "instituicao": "RocketSeat",
       "dataConclusao": "2022-10-12",
@@ -44,15 +17,6 @@
       "preco": "R$ 356,02",
       "link": "asdasdassssssssssss",
       "id": 5
-    },
-    {
-      "titulo": "Angular - Construção do primeiro Crud",
-      "instituicao": "Alura",
-      "dataConclusao": "2022-10-09",
-      "cargaHoraria": 92,
-      "preco": "R$ 25",
-      "link": "asdasdasdasd",
-      "id": 6
     },
     {
       "titulo": "Testes unitários com JUnit e Mockito",

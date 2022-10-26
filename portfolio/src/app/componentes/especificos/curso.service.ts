@@ -19,5 +19,18 @@ export class CursoService {
   criar(curso: Curso): Observable<Curso> {
     return this.http.post<Curso>(this.API, curso);
   }
+
+  deletarCurso(id: number): Observable<Curso> {
+    const url = `${this.API}/${id}`;
+    return this.http.delete<Curso>(url);
+  }
+
+  buscarCursoPorId(id: number): Observable<Curso> {
+    const url = `${this.API}/${id}`;
+    return this.http.get<Curso>(url);
+  }
+
+  cancelarDeletarCurso() {}
+
 }
 

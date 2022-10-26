@@ -10,6 +10,7 @@ import { CadastrarCursosComponent } from './componentes/especificos/cadastrar-cu
 import { ListarCursosComponent } from './componentes/especificos/listar-cursos/listar-cursos.component';
 import { ItemCursosComponent } from './componentes/especificos/item-cursos/item-cursos.component';
 import { HttpClientModule } from '@angular/common/http';
+import { ExcluirCursosComponent } from './componentes/especificos/excluir-cursos/excluir-cursos.component';
 
 const maskConfig: Partial<IConfig> = {
   validation: false,
@@ -22,7 +23,8 @@ const maskConfig: Partial<IConfig> = {
     Atividade7RodapeComponent,
     CadastrarCursosComponent,
     ListarCursosComponent,
-    ItemCursosComponent
+    ItemCursosComponent,
+    ExcluirCursosComponent
   ],
   imports: [
     BrowserModule,
