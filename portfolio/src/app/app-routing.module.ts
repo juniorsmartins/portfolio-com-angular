@@ -16,7 +16,7 @@ const routes: Routes = [
   {
     path: 'listarCursos',
     component: ListarCursosComponent
-  },
+  }
 ];
 
 @NgModule({

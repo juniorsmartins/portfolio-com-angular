@@ -1,0 +1,28 @@
+{
+  "curso": [
+    {
+      "titulo": "Microsserviços com Java e Spring",
+      "instituicao": "Alura",
+      "dataConclusao": "11/05/2022",
+      "cargaHoraria": 10,
+      "preco": "55",
+      "link": "http1"
+    },
+    {
+      "titulo": "Mensageria com RabbitMQ",
+      "instituicao": "Dio",
+      "dataConclusao": "20/08/2021",
+      "cargaHoraria": 8,
+      "preco": "35",
+      "link": "http2"
+    },
+    {
+      "titulo": "Crud com Angular 14",
+      "instituicao": "AlgaWorks",
+      "dataConclusao": "07/07/20",
+      "cargaHoraria": 9,
+      "preco": "62",
+      "link": "http3"
+    }
+  ]
+}
