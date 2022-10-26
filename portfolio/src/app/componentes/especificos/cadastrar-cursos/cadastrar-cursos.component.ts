@@ -1,6 +1,7 @@
 import * as M from 'materialize-css';
 
 import { Component, OnInit } from '@angular/core';
+import { Curso } from '../curso';
 
 @Component({
   selector: 'app-cadastrar-cursos',
@@ -14,10 +15,11 @@ export class CadastrarCursosComponent implements OnInit {
       ficha: 'Ficha'
   }
 
-  curso = {
+  curso: Curso = {
+    id: 0,
     titulo: '',
     instituicao: '',
-    dataConclusao: '',
+    dataConclusao: new Date,
     cargaHoraria: 0,
     preco: '',
     link: ''

@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { Curso } from '../curso';
 
 @Component({
   selector: 'app-item-cursos',
@@ -7,11 +8,13 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class ItemCursosComponent implements OnInit {
 
-  @Input() curso = {
+  @Input() curso: Curso = {
+    id: 0,
     titulo: '',
     instituicao: '',
-    dataConclusao: '',
+    dataConclusao: new Date,
     cargaHoraria: 0,
+    preco: '',
     link: ''
   }
 
