@@ -3,7 +3,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
-  <div *ngIf="listaDeCursos.length > 0, else semCursos">
+  <div *ngIf="this.listaDeCursos.length > 0, else semCursos">
       <h2 class="black-text center-align">Listar Cursos</h2>
       <div *ngFor="let curso of listaDeCursos">
         <app-item-cursos [curso]="curso"></app-item-cursos>
@@ -16,7 +16,7 @@
 
 <ng-template #semCursos>
   <div class="center-align">
-    <p class="white-text">Nenhun curso cadastrado!</p>
+    <p class="black-text">Nenhun curso cadastrado!</p>
   </div>
 </ng-template>
 

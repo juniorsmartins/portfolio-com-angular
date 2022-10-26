@@ -9,6 +9,7 @@ import { Atividade7RodapeComponent } from './componentes/atividade7-rodape/ativi
 import { CadastrarCursosComponent } from './componentes/especificos/cadastrar-cursos/cadastrar-cursos.component';
 import { ListarCursosComponent } from './componentes/especificos/listar-cursos/listar-cursos.component';
 import { ItemCursosComponent } from './componentes/especificos/item-cursos/item-cursos.component';
+import { HttpClientModule } from '@angular/common/http';
 
 const maskConfig: Partial<IConfig> = {
   validation: false,
@@ -27,7 +28,8 @@ const maskConfig: Partial<IConfig> = {
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    NgxMaskModule.forRoot(maskConfig)
+    NgxMaskModule.forRoot(maskConfig),
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

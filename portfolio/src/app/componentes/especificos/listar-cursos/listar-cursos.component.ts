@@ -1,3 +1,4 @@
+import { CursoService } from './../curso.service';
 import { Component, OnInit } from '@angular/core';
 import { Curso } from '../curso';
 
@@ -10,8 +11,12 @@ export class ListarCursosComponent implements OnInit {
 
   listaDeCursos: Curso[] = [];
 
-  constructor() {}
+  constructor(private service: CursoService) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.service.listarCursos().subscribe((listaDeCursos) => {
+      this.listaDeCursos = listaDeCursos;
+    });
+  }
 
 }

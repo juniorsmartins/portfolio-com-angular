@@ -9,11 +9,13 @@
         <div class="card-content white-text">
           <span class="card-title center-align">Curso</span>
           <div class="left-align">
-            <p> {{ curso.titulo }} </p>
-            <p> {{ curso.instituicao }} </p>
-            <p> {{ curso.dataConclusao }} </p>
-            <p> {{ curso.cargaHoraria }} </p>
-            <p> {{ curso.link }} </p>
+            <p> <span class="deep-orange-text">ID:</span> {{ curso.id }} </p> <!-- Interpolation -->
+            <p> <span class="deep-orange-text">Título:</span> {{ curso.titulo }} </p> <!-- Interpolation -->
+            <p> <span class="deep-orange-text">Instituição:</span> {{ curso.instituicao }} </p> <!-- Interpolation -->
+            <p> <span class="deep-orange-text">Data de Conclusão:</span> {{ curso.dataConclusao }} </p> <!-- Interpolation -->
+            <p> <span class="deep-orange-text">Carga Horária:</span> {{ curso.cargaHoraria }} </p> <!-- Interpolation -->
+            <p> <span class="deep-orange-text">Preço:</span> {{ curso.preco }} </p> <!-- Interpolation -->
+            <p> <span class="deep-orange-text">Link da certificação:</span> {{ curso.link }} </p> <!-- Interpolation -->
           </div>
         </div>
         <div class="card-action right-align">

@@ -12,7 +12,7 @@ export class ItemCursosComponent implements OnInit {
     id: 0,
     titulo: '',
     instituicao: '',
-    dataConclusao: new Date,
+    dataConclusao: '',
     cargaHoraria: 0,
     preco: '',
     link: ''

@@ -1,7 +1,9 @@
+import { CursoService } from './../curso.service';
 import * as M from 'materialize-css';
 
 import { Component, OnInit } from '@angular/core';
 import { Curso } from '../curso';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-cadastrar-cursos',
@@ -16,21 +18,27 @@ export class CadastrarCursosComponent implements OnInit {
   }
 
   curso: Curso = {
-    id: 0,
     titulo: '',
     instituicao: '',
-    dataConclusao: new Date,
+    dataConclusao: '',
     cargaHoraria: 0,
     preco: '',
     link: ''
   }
 
-  constructor() {}
+  constructor
+  (
+    private service: CursoService,
+    private router: Router
+  ) {}
 
   ngOnInit(): void {}
 
   salvarCadastroDoCurso() {
-    alert("Curso cadastrado com sucesso!");
+    this.service.criar(this.curso).subscribe(() =>
+    {
+      this.router.navigate(['/listarCursos'])
+    });
   }
 
   limparFormularioDoCurso() {
