@@ -22,15 +22,6 @@ export class ItemCursosComponent implements OnInit {
 
   ngOnInit(): void {}
 
-  larguraCardCurso(): string {
-    if(this.curso.titulo.length >= 256) {
-      return 'nome-de-estilo-conforme-tamanho-aqui-e-grande';
-    }
-    return 'nome-de-estilo-conforme-tamanho-aqui-e-pequeno';
-  }
-
-  detalharCadastroDoCurso() {
-    alert("Curso detalhado com sucesso!");
-  }
-
 }
+
+

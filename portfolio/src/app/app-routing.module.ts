@@ -1,3 +1,4 @@
+import { ContatosComponent } from './componentes/contatos/contatos.component';
 import { EditarCursosComponent } from './componentes/especificos/editar-cursos/editar-cursos.component';
 import { ExcluirCursosComponent } from './componentes/especificos/excluir-cursos/excluir-cursos.component';
 import { ListarCursosComponent } from './componentes/especificos/listar-cursos/listar-cursos.component';
@@ -26,6 +27,10 @@ const routes: Routes = [
   {
     path: 'especificos/editarCurso/:id',
     component: EditarCursosComponent
+  },
+  {
+    path: 'contatos',
+    component: ContatosComponent
   }
 ];
 

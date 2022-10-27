@@ -3,6 +3,8 @@ import { Component, OnInit } from '@angular/core';
 import { Curso } from '../curso';
 import { CursoService } from '../curso.service';
 
+declare var jQuery: any;
+
 @Component({
   selector: 'app-excluir-cursos',
   templateUrl: './excluir-cursos.component.html',
@@ -31,7 +33,7 @@ export class ExcluirCursosComponent implements OnInit {
     const id = this.route.snapshot.paramMap.get('id');
     this.service.buscarCursoPorId(parseInt(id!)).subscribe((curso) => {
       this.curso = curso;
-    })
+    });
   }
 
   excluirCurso()
@@ -49,3 +51,5 @@ export class ExcluirCursosComponent implements OnInit {
     this.router.navigate(['/listarCursos']);
   }
 }
+
+
