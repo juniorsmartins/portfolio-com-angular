@@ -17,15 +17,6 @@
       "preco": "R$ 35",
       "link": "http2",
       "id": 2
-    },
-    {
-      "titulo": "Figma - construção de layout de site mobile",
-      "instituicao": "Cubos Academy",
-      "dataConclusao": "2022-10-18",
-      "cargaHoraria": 95,
-      "preco": "R$ 675,35",
-      "link": "http4",
-      "id": 4
     }
   ]
 }

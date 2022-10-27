@@ -13,7 +13,7 @@ import { Router } from '@angular/router';
 export class CadastrarCursosComponent implements OnInit {
 
   chapeus = {
-      formulario: 'Formulário para cadastrar cursos',
+      formulario: 'Formulário de Cursos',
       ficha: 'Ficha'
   }
 

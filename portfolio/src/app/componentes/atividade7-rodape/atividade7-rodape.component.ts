@@ -13,7 +13,5 @@ export class Atividade7RodapeComponent implements OnInit {
     this.ano = new Date().getFullYear();
   }
 
-  ngOnInit(): void {
-  }
-
+  ngOnInit(): void {}
 }
