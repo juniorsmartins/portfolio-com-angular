@@ -3,8 +3,8 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
-  <div class=""> <!-- class="container" -->
-    <div class=""> <!--  class="grid-example" [ngClass]="larguraCardCurso()" -->
+  <div> <!-- class="container" -->
+    <div> <!--  class="grid-example" [ngClass]="larguraCardCurso()" -->
       <div class="card blue-grey darken-1 hoverable">
         <div class="card-content white-text">
           <span class="card-title center-align">Curso</span>
@@ -19,9 +19,8 @@
           </div>
         </div>
         <div class="card-action right-align">
-          <button type="button" class="waves-effect waves-light btn-large" routerLink="/especificos/editarCurso/{{this.curso.id}}"> <i class="material-icons">edit</i> </button>
-          <button (click)="detalharCadastroDoCurso()" type="button" class="waves-effect waves-light btn-large"> <i class="material-icons">zoom_in</i> </button> <!-- Event Binding -->
-          <button type="button" class="waves-effect waves-light btn-large" routerLink="/especificos/excluirCurso/{{this.curso.id}}"> <i class="material-icons">delete</i> </button>
+            <button type="button" class="waves-effect waves-light btn-large" routerLink="/especificos/editarCurso/{{this.curso.id}}"> <i class="material-icons">edit</i> </button>
+            <button type="button" class="waves-effect waves-light btn-large" routerLink="/especificos/excluirCurso/{{this.curso.id}}"> <i class="material-icons">delete</i> </button>
         </div>
       </div>
     </div>
@@ -30,6 +29,4 @@
   <!-- Compiled and minified JavaScript -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 </section>
-
-
 
