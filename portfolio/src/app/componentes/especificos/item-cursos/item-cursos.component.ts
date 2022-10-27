@@ -18,7 +18,7 @@ export class ItemCursosComponent implements OnInit {
     link: ''
   }
 
-  constructor() { }
+  constructor() {}
 
   ngOnInit(): void {}
 
@@ -27,14 +27,6 @@ export class ItemCursosComponent implements OnInit {
       return 'nome-de-estilo-conforme-tamanho-aqui-e-grande';
     }
     return 'nome-de-estilo-conforme-tamanho-aqui-e-pequeno';
-  }
-
-  editarCadastroDoCurso() {
-    alert("Curso editado com sucesso!");
-  }
-
-  deletarCadastroDoCurso() {
-    alert("Curso deletado com sucesso!");
   }
 
   detalharCadastroDoCurso() {

@@ -12,7 +12,7 @@ import { Router } from '@angular/router';
 })
 export class CadastrarCursosComponent implements OnInit {
 
-    chapeus = {
+  chapeus = {
       formulario: 'Formulário para cadastrar cursos',
       ficha: 'Ficha'
   }
@@ -35,9 +35,9 @@ export class CadastrarCursosComponent implements OnInit {
   ngOnInit(): void {}
 
   salvarCadastroDoCurso() {
-    this.service.criar(this.curso).subscribe(() =>
+    this.service.criarCurso(this.curso).subscribe(() =>
     {
-      this.router.navigate(['/listarCursos'])
+      this.router.navigate(['/listarCursos']);
     });
   }
 

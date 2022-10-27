@@ -18,5 +18,4 @@ export class ListarCursosComponent implements OnInit {
       this.listaDeCursos = listaDeCursos;
     });
   }
-
 }

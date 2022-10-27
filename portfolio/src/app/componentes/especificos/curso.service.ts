@@ -12,15 +12,15 @@ export class CursoService {
 
   constructor(private http: HttpClient) {}
 
+  criarCurso(curso: Curso): Observable<Curso> {
+    return this.http.post<Curso>(this.API, curso);
+  }
+
   listarCursos(): Observable<Curso[]> {
     return this.http.get<Curso[]>(this.API);
   }
 
-  criar(curso: Curso): Observable<Curso> {
-    return this.http.post<Curso>(this.API, curso);
-  }
-
-  deletarCurso(id: number): Observable<Curso> {
+  excluirCurso(id: number): Observable<Curso> {
     const url = `${this.API}/${id}`;
     return this.http.delete<Curso>(url);
   }
@@ -30,7 +30,9 @@ export class CursoService {
     return this.http.get<Curso>(url);
   }
 
-  cancelarDeletarCurso() {}
-
+  editarCurso(curso: Curso): Observable<Curso> {
+    const url = `${this.API}/${curso.id}`;
+    return this.http.put<Curso>(url, curso);
+  }
 }
 

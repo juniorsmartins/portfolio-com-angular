@@ -1,0 +1,94 @@
+<section class="white">
+
+  <!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+
+  <div class="container">
+
+    <div class="row">
+      <form action="" class="col s11">
+        <h2 class="center-align"><i class="material-icons">school</i> {{ chapeus.formulario }} </h2> <!-- Interpolation -->
+
+        <div class="row">
+          <label for="titulo"> Titulo: </label>
+          <div class="input-field col s11">
+            <input id="titulo" type="text" placeholder="Digitar nome" name="modelo-card" [(ngModel)]="this.curso.titulo"> <!-- Two-way Binding -->
+          </div>
+        </div>
+
+        <div class="row">
+          <label for="instituicao"> Instituição: </label>
+          <div class="input-field col s11">
+            <input id="instituicao" type="text" placeholder="Digitar nome" name="modelo-card" [(ngModel)]="this.curso.instituicao"> <!-- Two-way Binding -->
+          </div>
+        </div>
+
+        <div class="row">
+          <label for="dataConclusao"> Data de Conclusão: </label>
+          <div class="input-field col">
+            <input id="dataConclusao" type="date" name="modelo-card" [(ngModel)]="this.curso.dataConclusao"> <!-- Two-way Binding -->
+          </div>
+          <label for="cargaHoraria"> Carga Horária: </label>
+          <div class="input-field col">
+              <input id="cargaHoraria" type="number" name="modelo-card" [(ngModel)]="this.curso.cargaHoraria"> <!-- Two-way Binding -->
+          </div>
+        </div>
+
+        <div class="row">
+            <label for="preco"> Preço: </label>
+            <div class="input-field col">
+              <input id="preco" type="text" name="modelo-card" [(ngModel)]="this.curso.preco" mask="separator.2" [thousandSeparator]="'.'" [decimalMarker]="','" prefix="R$ " [dropSpecialCharacters]="false" [showMaskTyped]="false"> <!-- Two-way Binding -->
+            </div>
+        </div>
+
+        <div class="row">
+          <label for="linkCertificado"> Link: </label>
+          <div class="input-field col s11">
+            <input id="linkCertificado" type="text" name="modelo-card" placeholder="Registrar certificado" [(ngModel)]="this.curso.link"> <!-- Two-way Binding -->
+          </div>
+        </div>
+
+        <div class="row center-align">
+          <div class="input-field col s5">
+            <button (click)="salvarEdicaoDoCadastroDoCurso()" type="button" class="waves-effect waves-purple btn-large"><i class="material-icons left">save</i>Salvar</button> <!-- Event Binding -->
+            <button (click)="limparFormularioDoCurso()" type="button" class="waves-effect waves-light btn-large"><i class="material-icons left">clear</i>Limpar</button> <!-- Event Binding -->
+            <button (click)="cancelarFormularioDoCurso()" type="button" class="waves-effect waves-light btn-large"><i class="material-icons left">cancel</i>Cancelar</button> <!-- Event Binding -->
+          </div>
+        </div>
+      </form>
+    </div>
+
+    <div>
+      <table class="responsive-table bordered highlight centered black-text">
+        <thead>
+          <tr>
+            <th>Título</th>
+            <th>Instituição</th>
+            <th>Data de Conclusão</th>
+            <th>Carga Horária</th>
+            <th>Preço</th>
+            <th>Link do Certificado</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td> {{ this.curso.titulo }} </td> <!-- Interpolation -->
+            <td> {{ this.curso.instituicao }} </td> <!-- Interpolation -->
+            <td> {{ this.curso.dataConclusao }} </td> <!-- Interpolation -->
+            <td> {{ this.curso.cargaHoraria }} </td> <!-- Interpolation -->
+            <td> {{ this.curso.preco }} </td> <!-- Interpolation -->
+            <td> {{ this.curso.link }} </td> <!-- Interpolation -->
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+  </div>
+
+
+  <!-- Compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+</section>

@@ -34,17 +34,17 @@ export class ExcluirCursosComponent implements OnInit {
     })
   }
 
-  deletarCurso()
+  excluirCurso()
   {
     if(this.curso.id)
     {
-      this.service.deletarCurso(this.curso.id).subscribe(() => {
+      this.service.excluirCurso(this.curso.id).subscribe(() => {
         this.router.navigate(['/listarCursos']);
       })
     }
   }
 
-  cancelarDeletarCurso()
+  cancelarExcluirCurso()
   {
     this.router.navigate(['/listarCursos']);
   }

@@ -9,19 +9,19 @@
         <div class="card-content white-text">
           <span class="card-title center-align">Curso</span>
           <div class="left-align">
-            <p> <span class="deep-orange-text">ID:</span> {{ curso.id }} </p> <!-- Interpolation -->
-            <p> <span class="deep-orange-text">Título:</span> {{ curso.titulo }} </p> <!-- Interpolation -->
-            <p> <span class="deep-orange-text">Instituição:</span> {{ curso.instituicao }} </p> <!-- Interpolation -->
-            <p> <span class="deep-orange-text">Data de Conclusão:</span> {{ curso.dataConclusao }} </p> <!-- Interpolation -->
-            <p> <span class="deep-orange-text">Carga Horária:</span> {{ curso.cargaHoraria }} </p> <!-- Interpolation -->
-            <p> <span class="deep-orange-text">Preço:</span> {{ curso.preco }} </p> <!-- Interpolation -->
-            <p> <span class="deep-orange-text">Link da certificação:</span> {{ curso.link }} </p> <!-- Interpolation -->
+            <p> <span class="deep-orange-text">ID:</span> {{ this.curso.id }} </p> <!-- Interpolation -->
+            <p> <span class="deep-orange-text">Título:</span> {{ this.curso.titulo }} </p> <!-- Interpolation -->
+            <p> <span class="deep-orange-text">Instituição:</span> {{ this.curso.instituicao }} </p> <!-- Interpolation -->
+            <p> <span class="deep-orange-text">Data de Conclusão:</span> {{ this.curso.dataConclusao }} </p> <!-- Interpolation -->
+            <p> <span class="deep-orange-text">Carga Horária:</span> {{ this.curso.cargaHoraria }} </p> <!-- Interpolation -->
+            <p> <span class="deep-orange-text">Preço:</span> {{ this.curso.preco }} </p> <!-- Interpolation -->
+            <p> <span class="deep-orange-text">Link da certificação:</span> {{ this.curso.link }} </p> <!-- Interpolation -->
           </div>
         </div>
         <div class="card-action right-align">
-          <button (click)="editarCadastroDoCurso()" type="button" class="waves-effect waves-light btn-large"> <i class="material-icons">edit</i> </button> <!-- Event Binding -->
+          <button type="button" class="waves-effect waves-light btn-large" routerLink="/especificos/editarCurso/{{this.curso.id}}"> <i class="material-icons">edit</i> </button>
           <button (click)="detalharCadastroDoCurso()" type="button" class="waves-effect waves-light btn-large"> <i class="material-icons">zoom_in</i> </button> <!-- Event Binding -->
-          <button type="button" class="waves-effect waves-light btn-large" routerLink="/especificos/deletarCursos/{{curso.id}}"> <i class="material-icons">delete</i> </button>
+          <button type="button" class="waves-effect waves-light btn-large" routerLink="/especificos/excluirCurso/{{this.curso.id}}"> <i class="material-icons">delete</i> </button>
         </div>
       </div>
     </div>
