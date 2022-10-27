@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
+import { NgxMaskModule, IConfig } from 'ngx-mask'
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { FormsModule } from '@angular/forms';
@@ -9,6 +9,13 @@ import { Atividade7RodapeComponent } from './componentes/atividade7-rodape/ativi
 import { CadastrarCursosComponent } from './componentes/especificos/cadastrar-cursos/cadastrar-cursos.component';
 import { ListarCursosComponent } from './componentes/especificos/listar-cursos/listar-cursos.component';
 import { ItemCursosComponent } from './componentes/especificos/item-cursos/item-cursos.component';
+import { HttpClientModule } from '@angular/common/http';
+import { ExcluirCursosComponent } from './componentes/especificos/excluir-cursos/excluir-cursos.component';
+import { EditarCursosComponent } from './componentes/especificos/editar-cursos/editar-cursos.component';
+
+const maskConfig: Partial<IConfig> = {
+  validation: false,
+};
 
 @NgModule({
   declarations: [
@@ -17,12 +24,16 @@ import { ItemCursosComponent } from './componentes/especificos/item-cursos/item-
     Atividade7RodapeComponent,
     CadastrarCursosComponent,
     ListarCursosComponent,
-    ItemCursosComponent
+    ItemCursosComponent,
+    ExcluirCursosComponent,
+    EditarCursosComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    NgxMaskModule.forRoot(maskConfig),
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

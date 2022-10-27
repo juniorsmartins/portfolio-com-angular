@@ -26,13 +26,20 @@
 
         <div class="row">
           <label for="dataConclusao"> Data de Conclusão: </label>
-          <div class="input-field col s5">
+          <div class="input-field col">
             <input id="dataConclusao" class="" type="date" name="modelo-card" [(ngModel)]="curso.dataConclusao"> <!-- Two-way Binding -->
           </div>
           <label for="cargaHoraria"> Carga Horária: </label>
-          <div class="input-field col s5">
+          <div class="input-field col">
               <input id="cargaHoraria" class="" type="number" name="modelo-card" [(ngModel)]="curso.cargaHoraria"> <!-- Two-way Binding -->
           </div>
+        </div>
+
+        <div class="row">
+            <label for="preco"> Preço: </label>
+            <div class="input-field col">
+              <input id="preco" class="" type="text" name="modelo-card" [(ngModel)]="curso.preco" mask="separator.2" [thousandSeparator]="'.'" [decimalMarker]="','" prefix="R$ " [dropSpecialCharacters]="false" [showMaskTyped]="false"> <!-- Two-way Binding -->
+            </div>
         </div>
 
         <div class="row">
@@ -44,7 +51,7 @@
 
         <div class="row center-align">
           <div class="input-field col s5">
-            <button (click)="salvarCadastroDoCurso()" type="button" class="waves-effect waves-purple btn-large" routerLink="/listarCursos"><i class="material-icons left">save</i>Salvar</button> <!-- Event Binding -->
+            <button (click)="salvarCadastroDoCurso()" type="button" class="waves-effect waves-purple btn-large"><i class="material-icons left">save</i>Salvar</button> <!-- Event Binding -->
             <button (click)="limparFormularioDoCurso()" type="button" class="waves-effect waves-light btn-large"><i class="material-icons left">clear</i>Limpar</button> <!-- Event Binding -->
           </div>
         </div>
@@ -59,6 +66,7 @@
             <th>Instituição</th>
             <th>Data de Conclusão</th>
             <th>Carga Horária</th>
+            <th>Preço</th>
             <th>Link do Certificado</th>
           </tr>
         </thead>
@@ -68,6 +76,7 @@
             <td> {{ curso.instituicao }} </td> <!-- Interpolation -->
             <td> {{ curso.dataConclusao }} </td> <!-- Interpolation -->
             <td> {{ curso.cargaHoraria }} </td> <!-- Interpolation -->
+            <td> {{ curso.preco }} </td> <!-- Interpolation -->
             <td> {{ curso.link }} </td> <!-- Interpolation -->
           </tr>
         </tbody>

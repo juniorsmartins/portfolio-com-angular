@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { Curso } from '../curso';
 
 @Component({
   selector: 'app-item-cursos',
@@ -7,15 +8,17 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class ItemCursosComponent implements OnInit {
 
-  @Input() curso = {
+  @Input() curso: Curso = {
+    id: 0,
     titulo: '',
     instituicao: '',
     dataConclusao: '',
     cargaHoraria: 0,
+    preco: '',
     link: ''
   }
 
-  constructor() { }
+  constructor() {}
 
   ngOnInit(): void {}
 
@@ -24,14 +27,6 @@ export class ItemCursosComponent implements OnInit {
       return 'nome-de-estilo-conforme-tamanho-aqui-e-grande';
     }
     return 'nome-de-estilo-conforme-tamanho-aqui-e-pequeno';
-  }
-
-  editarCadastroDoCurso() {
-    alert("Curso editado com sucesso!");
-  }
-
-  deletarCadastroDoCurso() {
-    alert("Curso deletado com sucesso!");
   }
 
   detalharCadastroDoCurso() {
