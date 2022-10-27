@@ -1,40 +1,31 @@
 {
   "curso": [
     {
-      "titulo": "Comunicação de microsserviços com RabbitMQ",
+      "titulo": "Angular 14: desenvolve o primeiro CRUD",
       "instituicao": "Alura",
-      "dataConclusao": "2022-10-10",
-      "cargaHoraria": 77,
-      "preco": "R$ 256,78",
-      "link": "http4",
-      "id": 5
+      "dataConclusao": "2022-10-28",
+      "cargaHoraria": 23,
+      "preco": "R$ 125,32",
+      "link": "http1",
+      "id": 1
     },
     {
-      "titulo": "Desenvolvimento de Soft Skills com Beth Agatha",
-      "instituicao": "Abrasel",
-      "dataConclusao": "2022-10-09",
-      "cargaHoraria": 35,
-      "preco": "R$ 562,23",
-      "link": "http5",
-      "id": 6
+      "titulo": "Business Intelligence",
+      "instituicao": "Dio",
+      "dataConclusao": "2022-10-08",
+      "cargaHoraria": 25,
+      "preco": "R$ 35",
+      "link": "http2",
+      "id": 2
     },
     {
-      "titulo": "Java Avançado - Maturidade de API Rest",
-      "instituicao": "Ada Academy",
-      "dataConclusao": "2022-10-20",
-      "cargaHoraria": 28,
-      "preco": "R$ 325,42",
-      "link": "http6",
-      "id": 7
-    },
-    {
-      "titulo": "Tunning de banco de dados relacional",
-      "instituicao": "Oracle",
-      "dataConclusao": "2022-10-25",
+      "titulo": "Figma - construção de layout de site mobile",
+      "instituicao": "Cubos Academy",
+      "dataConclusao": "2022-10-18",
       "cargaHoraria": 95,
-      "preco": "R$ 523",
-      "link": "http6",
-      "id": 8
+      "preco": "R$ 675,35",
+      "link": "http4",
+      "id": 4
     }
   ]
 }

@@ -5,8 +5,8 @@ export interface Curso
   id?: number,
   titulo: string,
   instituicao: string,
-  dataConclusao: string,
+  dataConclusao: any,
   cargaHoraria: number,
-  preco: string,
+  preco: any,
   link: string
 }
