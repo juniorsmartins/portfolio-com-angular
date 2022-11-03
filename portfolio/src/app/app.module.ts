@@ -13,6 +13,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { ExcluirCursosComponent } from './componentes/especificos/excluir-cursos/excluir-cursos.component';
 import { EditarCursosComponent } from './componentes/especificos/editar-cursos/editar-cursos.component';
 import { ContatosComponent } from './componentes/contatos/contatos.component';
+import { DashboardComponent } from './componentes/dashboard/dashboard.component';
 
 const maskConfig: Partial<IConfig> = {
   validation: false,
@@ -28,7 +29,8 @@ const maskConfig: Partial<IConfig> = {
     ItemCursosComponent,
     ExcluirCursosComponent,
     EditarCursosComponent,
-    ContatosComponent
+    ContatosComponent,
+    DashboardComponent
   ],
   imports: [
     BrowserModule,
