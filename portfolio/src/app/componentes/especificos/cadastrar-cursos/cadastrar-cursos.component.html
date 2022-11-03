@@ -25,20 +25,23 @@
         </div>
 
         <div class="row">
-          <label for="dataConclusao"> Data de Conclusão: </label>
-          <div class="input-field col">
-            <input id="dataConclusao" class="" type="date" name="modelo-card" [(ngModel)]="curso.dataConclusao"> <!-- Two-way Binding -->
-          </div>
           <label for="cargaHoraria"> Carga Horária: </label>
-          <div class="input-field col">
-              <input id="cargaHoraria" class="" type="number" name="modelo-card" [(ngModel)]="curso.cargaHoraria"> <!-- Two-way Binding -->
+          <div class="input-field col s12">
+            <input id="cargaHoraria" class="" type="number" name="modelo-card" [(ngModel)]="curso.cargaHoraria"> <!-- Two-way Binding -->
+          </div>
+        </div>
+
+        <div class="row">
+          <label for="dataConclusao"> Data de Conclusão: </label>
+          <div class="input-field col s12">
+             <input id="dataConclusao" class="" type="date" name="modelo-card" [(ngModel)]="curso.dataConclusao"> <!-- Two-way Binding -->
           </div>
         </div>
 
         <div class="row">
             <label for="preco"> Preço: </label>
-            <div class="input-field col">
-              <input id="preco" class="" type="text" name="modelo-card" [(ngModel)]="curso.preco" mask="separator.2" [decimalMarker]="'.'" [dropSpecialCharacters]="false" [showMaskTyped]="false"> <!-- Two-way Binding -->
+            <div class="input-field col s12">
+              <input id="preco" class="" type="text" name="modelo-card" [(ngModel)]="curso.preco" mask="separator.2" [thousandSeparator]="'.'" [decimalMarker]="'.'" [dropSpecialCharacters]="false" [showMaskTyped]="false"> <!-- Two-way Binding -->
             </div>
         </div>
 

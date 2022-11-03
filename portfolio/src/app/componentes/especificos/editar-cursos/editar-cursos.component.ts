@@ -11,7 +11,7 @@ import { Curso } from '../curso';
 export class EditarCursosComponent implements OnInit {
 
   chapeus = {
-    formulario: 'Formulário para cadastrar cursos',
+    formulario: 'Atualizar Curso',
     ficha: 'Ficha'
   }
 
