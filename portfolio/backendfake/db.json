@@ -19,15 +19,6 @@
       "id": 2
     },
     {
-      "titulo": "Java Avançado",
-      "instituicao": "Alura",
-      "dataConclusao": "2022-11-01",
-      "cargaHoraria": 300,
-      "preco": "280",
-      "link": "http3",
-      "id": 3
-    },
-    {
       "titulo": "Python Iniciante",
       "instituicao": "DevMedia",
       "dataConclusao": "2022-11-03",

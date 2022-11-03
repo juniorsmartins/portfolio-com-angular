@@ -3,7 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgxMaskModule, IConfig } from 'ngx-mask'
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { Atividade7CabecalhoComponent } from './componentes/atividade7-cabecalho/atividade7-cabecalho.component';
 import { Atividade7RodapeComponent } from './componentes/atividade7-rodape/atividade7-rodape.component';
 import { CadastrarCursosComponent } from './componentes/especificos/cadastrar-cursos/cadastrar-cursos.component';
@@ -39,7 +39,8 @@ const maskConfig: Partial<IConfig> = {
     AppRoutingModule,
     FormsModule,
     NgxMaskModule.forRoot(maskConfig),
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
