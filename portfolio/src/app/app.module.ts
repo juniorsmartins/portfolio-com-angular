@@ -14,6 +14,7 @@ import { ExcluirCursosComponent } from './componentes/especificos/excluir-cursos
 import { EditarCursosComponent } from './componentes/especificos/editar-cursos/editar-cursos.component';
 import { ContatosComponent } from './componentes/contatos/contatos.component';
 import { DashboardComponent } from './componentes/dashboard/dashboard.component';
+import { CalculadorComponent } from './componentes/dashboard/calculador/calculador.component';
 
 const maskConfig: Partial<IConfig> = {
   validation: false,
@@ -30,7 +31,8 @@ const maskConfig: Partial<IConfig> = {
     ExcluirCursosComponent,
     EditarCursosComponent,
     ContatosComponent,
-    DashboardComponent
+    DashboardComponent,
+    CalculadorComponent
   ],
   imports: [
     BrowserModule,

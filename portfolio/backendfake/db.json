@@ -1,31 +1,58 @@
 {
   "curso": [
     {
-      "titulo": "Angular 14: desenvolve o primeiro CRUD",
-      "instituicao": "Alura",
-      "dataConclusao": "2022-10-28",
-      "cargaHoraria": 23,
-      "preco": "R$ 125,32",
-      "link": "http1",
+      "titulo": "Java Intermediário",
+      "instituicao": "Dio",
+      "dataConclusao": "2022-10-31",
+      "cargaHoraria": 200,
+      "preco": "125",
+      "link": "http2",
       "id": 1
     },
     {
-      "titulo": "Angular 14: evoluindo a aplicação",
+      "titulo": "Java Iniciante",
       "instituicao": "Alura",
-      "dataConclusao": "2022-10-31",
-      "cargaHoraria": 100,
-      "preco": "R$ 43",
+      "dataConclusao": "2022-10-30",
+      "cargaHoraria": 80,
+      "preco": "120",
+      "link": "http1",
+      "id": 2
+    },
+    {
+      "titulo": "Java Avançado",
+      "instituicao": "Alura",
+      "dataConclusao": "2022-11-01",
+      "cargaHoraria": 300,
+      "preco": "280",
       "link": "http3",
       "id": 3
     },
     {
-      "titulo": "Java Avançado",
-      "instituicao": "UTFPR",
-      "dataConclusao": "2022-11-02",
-      "cargaHoraria": 185,
-      "preco": "R$ 364,25",
+      "titulo": "Python Iniciante",
+      "instituicao": "DevMedia",
+      "dataConclusao": "2022-11-03",
+      "cargaHoraria": 50,
+      "preco": "50",
       "link": "http4",
       "id": 4
+    },
+    {
+      "titulo": "Go Iniciante",
+      "instituicao": "Cubos Academy",
+      "dataConclusao": "2022-11-01",
+      "cargaHoraria": 50,
+      "preco": "50.25",
+      "link": "http7",
+      "id": 5
+    },
+    {
+      "titulo": "Vue Iniciante",
+      "instituicao": "Estudonauta",
+      "dataConclusao": "2022-11-02",
+      "cargaHoraria": 60,
+      "preco": "25.90",
+      "link": "http8",
+      "id": 6
     }
   ]
 }

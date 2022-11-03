@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'app-dashboard',
@@ -7,9 +7,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DashboardComponent implements OnInit {
 
-  constructor() { }
+  @Output() totalCursosPai = 0;
 
-  ngOnInit(): void {
+  @Output() painelKPIPai = {
+    totalCursos: 0,
+    totalCargaHoraria: 0,
+    totalPreco: 0
   }
 
+  constructor() { }
+
+  ngOnInit(): void {}
 }
