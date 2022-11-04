@@ -15,12 +15,30 @@
           <div class="input-field col s12">
             <input id="titulo" type="text" placeholder="Digitar nome" formControlName="titulo"> <!-- Formulário Reativo -->
           </div>
+          <div class="mensagem__erro" *ngIf="formulario.get('titulo')?.errors?.['required'] && formulario.get('titulo')?.touched">
+            Campo obrigatório!
+          </div>
+          <div class="mensagem__erro" *ngIf="formulario.get('titulo')?.errors?.['pattern']">
+            Não permite campo vazio!
+          </div>
+          <div class="mensagem__erro" *ngIf="formulario.get('titulo')?.errors?.['maxlength']">
+            Limite máximo de 150 caracteres.
+          </div>
         </div>
 
         <div class="row">
           <label for="instituicao"> Instituição: </label>
           <div class="input-field col s12">
             <input id="instituicao" type="text" placeholder="Digitar nome" formControlName="instituicao"> <!-- Formulário Reativo -->
+          </div>
+          <div class="mensagem__erro" *ngIf="formulario.get('instituicao')?.errors?.['required'] && formulario.get('instituicao')?.touched">
+            Campo obrigatório!
+          </div>
+          <div class="mensagem__erro" *ngIf="formulario.get('instituicao')?.errors?.['pattern']">
+            Não permite campo vazio!
+          </div>
+          <div class="mensagem__erro" *ngIf="formulario.get('instituicao')?.errors?.['maxlength']">
+            Limite máximo de 150 caracteres.
           </div>
         </div>
 
@@ -29,12 +47,18 @@
           <div class="input-field col s12">
             <input id="cargaHoraria" type="number" formControlName="cargaHoraria"> <!-- Formulário Reativo -->
           </div>
+          <div class="mensagem__erro" *ngIf="formulario.get('cargaHoraria')?.errors && formulario.get('cargaHoraria')?.touched">
+            Campo obrigatório!
+          </div>
         </div>
 
         <div class="row">
           <label for="dataConclusao"> Data de Conclusão: </label>
           <div class="input-field col s12">
              <input id="dataConclusao" type="date" formControlName="dataConclusao"> <!-- Formulário Reativo -->
+          </div>
+          <div class="mensagem__erro" *ngIf="formulario.get('dataConclusao')?.errors && formulario.get('dataConclusao')?.touched">
+            Campo obrigatório!
           </div>
         </div>
 

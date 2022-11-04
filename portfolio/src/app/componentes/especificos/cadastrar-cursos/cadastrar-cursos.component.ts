@@ -4,7 +4,7 @@ import * as M from 'materialize-css';
 import { Component, OnInit } from '@angular/core';
 import { Curso } from '../curso';
 import { Router } from '@angular/router';
-import { FormBuilder, FormGroup } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-cadastrar-cursos',
@@ -29,20 +29,31 @@ export class CadastrarCursosComponent implements OnInit {
 
   ngOnInit(): void {
     this.formulario = this.formBuilder.group({
-      titulo: ['Formulário Reativo'],
-      instituicao: ['Teste'],
-      dataConclusao: [''],
-      cargaHoraria: [''],
-      preco: ['155'],
-      link: ['Teste']
+      titulo: ['', Validators.compose([
+        Validators.required,
+        Validators.pattern(/(.|\s)*\S(.|\s)*/),
+        Validators.maxLength(150)
+      ])],
+      instituicao: ['', Validators.compose([
+        Validators.required,
+        Validators.pattern(/(.|\s)*\S(.|\s)*/),
+        Validators.maxLength(150)
+      ])],
+      cargaHoraria: ['', [Validators.required]],
+      dataConclusao: ['', [Validators.required]],
+      preco: [''],
+      link: ['']
     })
   }
 
   salvarCadastroDoCurso() {
-    this.service.criarCurso(this.formulario.value).subscribe(() =>
-    {
-      this.router.navigate(['/listarCursos']);
-    });
+    console.log(this.formulario.get('titulo')?.errors);
+    if(this.formulario.valid) {
+      this.service.criarCurso(this.formulario.value).subscribe(() =>
+      {
+        this.router.navigate(['/listarCursos']);
+      });
+    }
   }
 
   limparFormularioDoCurso() {
