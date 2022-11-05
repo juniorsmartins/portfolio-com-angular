@@ -44,6 +44,60 @@
       "preco": "25.90",
       "link": "http8",
       "id": 6
+    },
+    {
+      "titulo": "Python para iniciantes",
+      "instituicao": "Pythonmania",
+      "cargaHoraria": 35,
+      "dataConclusao": "2022-11-01",
+      "preco": "334",
+      "link": "asdad",
+      "id": 7
+    },
+    {
+      "titulo": "TypeScript para Front-end",
+      "instituicao": "Dio",
+      "cargaHoraria": 32,
+      "dataConclusao": "2022-11-02",
+      "preco": "34",
+      "link": "asdasd",
+      "id": 8
+    },
+    {
+      "titulo": "JavaScript para back-end",
+      "instituicao": "Rocketseat",
+      "cargaHoraria": 43,
+      "dataConclusao": "2022-11-02",
+      "preco": "32",
+      "link": "asdasd",
+      "id": 9
+    },
+    {
+      "titulo": "Android Java - meu primeiro app mobile",
+      "instituicao": "Coursera",
+      "cargaHoraria": 41,
+      "dataConclusao": "2022-11-04",
+      "preco": "56",
+      "link": "asdasdas",
+      "id": 10
+    },
+    {
+      "titulo": "SQL para manipular dados no banco de dados",
+      "instituicao": "Tribe",
+      "cargaHoraria": 12,
+      "dataConclusao": "2022-10-31",
+      "preco": "23",
+      "link": "asdfasd",
+      "id": 11
+    },
+    {
+      "titulo": "Figma para prototipar telas",
+      "instituicao": "Generation",
+      "cargaHoraria": 4,
+      "dataConclusao": "2022-11-03",
+      "preco": "22",
+      "link": "asfdasd",
+      "id": 12
     }
   ]
 }

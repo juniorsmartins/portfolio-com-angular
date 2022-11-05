@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpParams } from '@angular/common/http';
 import { Curso } from './curso';
 import { Observable } from 'rxjs';
 
@@ -16,7 +16,14 @@ export class CursoService {
     return this.http.post<Curso>(this.API, curso);
   }
 
-  listarCursos(): Observable<Curso[]> {
+  listarCursosComPaginacao(pagina: number): Observable<Curso[]> {
+    const itensPorPagina = 5;
+    let params = new HttpParams().set("_page", pagina).set("_limit", itensPorPagina);
+
+    return this.http.get<Curso[]>(this.API, { params: params });
+  }
+
+  listarCursosSemPaginacao(): Observable<Curso[]> {
     return this.http.get<Curso[]>(this.API);
   }
 
