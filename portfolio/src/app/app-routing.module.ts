@@ -1,5 +1,5 @@
 import { DashboardComponent } from './componentes/dashboard/dashboard.component';
-import { ContatosComponent } from './componentes/contatos/contatos.component';
+import { ContatosComponent } from './componentes/atividade7-rodape/contatos/contatos.component';
 import { EditarCursosComponent } from './componentes/especificos/editar-cursos/editar-cursos.component';
 import { ExcluirCursosComponent } from './componentes/especificos/excluir-cursos/excluir-cursos.component';
 import { ListarCursosComponent } from './componentes/especificos/listar-cursos/listar-cursos.component';

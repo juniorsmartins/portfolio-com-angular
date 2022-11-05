@@ -1,0 +1,7 @@
+<div class="center" *ngIf="existemMaisCursos; else SemMaisCursos">
+  <button type="button" class="waves-effect waves-light btn-large">Carregar mais</button>
+</div>
+
+<ng-template #SemMaisCursos>
+  <p class="mensagem-center">Não existem mais cursos para exibir!</p>
+</ng-template>
