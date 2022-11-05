@@ -1,10 +1,16 @@
 <section class="container">
+
   <!-- Compiled and minified CSS -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
+  <header class="container">
+    <div class="">
+      <input type="search" placeholder="O que procuras?" autofocus [(ngModel)]="filtro" (keyup)="pesquisarCursos()"> <!-- Two Way Binding -->
+    </div>
+  </header>
   <div *ngIf="this.listaDeCursos.length > 0, else semCursos">
-      <h2 class="black-text center-align">Listar Cursos</h2>
+      <h2 class="black-text center-align"><i class="material-icons">list</i> Listar Cursos </h2>
       <div *ngFor="let curso of listaDeCursos">
         <app-item-cursos [curso]="curso"></app-item-cursos>
       </div>
@@ -21,3 +27,4 @@
     <h1 class="black-text">Nenhun curso cadastrado!</h1>
   </div>
 </ng-template>
+
