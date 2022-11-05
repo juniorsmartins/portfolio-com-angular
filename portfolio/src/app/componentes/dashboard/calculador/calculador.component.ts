@@ -18,11 +18,12 @@ export class CalculadorComponent implements OnInit {
   }
 
   listaDeCursos: Curso[] = [];
+  paginaAtual: number = 1;
 
   constructor(private service: CursoService)  {}
 
   ngOnInit(): void {
-    this.service.listarCursos().subscribe((listaDeCursos) => {
+    this.service.listarCursosSemPaginacao().subscribe((listaDeCursos) => {
       this.listaDeCursos = listaDeCursos;
       this.totalCursosFilho = listaDeCursos.length;
 
