@@ -1,103 +1,121 @@
 {
   "curso": [
     {
+      "id": 1,
       "titulo": "Java Intermediário",
       "instituicao": "Dio",
+      "cargaHoraria": 18,
       "dataConclusao": "2022-10-31",
-      "cargaHoraria": 200,
-      "preco": "125",
-      "link": "http2",
-      "id": 1
+      "preco": "12.1",
+      "link": "http2"
     },
     {
-      "titulo": "Java Iniciante",
-      "instituicao": "Alura",
-      "dataConclusao": "2022-10-30",
-      "cargaHoraria": 80,
-      "preco": "120",
-      "link": "http1",
-      "id": 2
+      "id": 2,
+      "titulo": "Java Iniciante - parte I",
+      "instituicao": "Alura Viga",
+      "cargaHoraria": 81,
+      "dataConclusao": "2022-10-29",
+      "preco": "25.5",
+      "link": "http1"
     },
     {
+      "id": 4,
       "titulo": "Python Iniciante",
       "instituicao": "DevMedia",
+      "cargaHoraria": 28,
       "dataConclusao": "2022-11-03",
-      "cargaHoraria": 50,
-      "preco": "50",
-      "link": "http4",
-      "id": 4
+      "preco": "32.72",
+      "link": "http4"
     },
     {
+      "id": 5,
       "titulo": "Go Iniciante",
       "instituicao": "Cubos Academy",
-      "dataConclusao": "2022-11-01",
       "cargaHoraria": 50,
-      "preco": "50.25",
-      "link": "http7",
-      "id": 5
+      "dataConclusao": "2022-11-01",
+      "preco": "40.25",
+      "link": "http7"
     },
     {
+      "id": 6,
       "titulo": "Vue Iniciante",
       "instituicao": "Estudonauta",
-      "dataConclusao": "2022-11-02",
       "cargaHoraria": 60,
-      "preco": "25.90",
-      "link": "http8",
-      "id": 6
+      "dataConclusao": "2022-11-02",
+      "preco": "25.18",
+      "link": "http8"
     },
     {
+      "id": 7,
       "titulo": "Python para iniciantes",
       "instituicao": "Pythonmania",
-      "cargaHoraria": 35,
+      "cargaHoraria": 24,
       "dataConclusao": "2022-11-01",
-      "preco": "334",
-      "link": "asdad",
-      "id": 7
+      "preco": "30.65",
+      "link": "http9"
     },
     {
+      "id": 8,
       "titulo": "TypeScript para Front-end",
       "instituicao": "Dio",
       "cargaHoraria": 32,
       "dataConclusao": "2022-11-02",
-      "preco": "34",
-      "link": "asdasd",
-      "id": 8
+      "preco": "12.92",
+      "link": "http6"
     },
     {
+      "id": 9,
       "titulo": "JavaScript para back-end",
       "instituicao": "Rocketseat",
       "cargaHoraria": 43,
       "dataConclusao": "2022-11-02",
-      "preco": "32",
-      "link": "asdasd",
-      "id": 9
+      "preco": "24.58",
+      "link": "http4"
     },
     {
+      "id": 10,
       "titulo": "Android Java - meu primeiro app mobile",
       "instituicao": "Coursera",
       "cargaHoraria": 41,
       "dataConclusao": "2022-11-04",
-      "preco": "56",
-      "link": "asdasdas",
-      "id": 10
+      "preco": "42.25",
+      "link": "http7"
     },
     {
+      "id": 11,
       "titulo": "SQL para manipular dados no banco de dados",
       "instituicao": "Tribe",
-      "cargaHoraria": 12,
+      "cargaHoraria": 11,
       "dataConclusao": "2022-10-31",
-      "preco": "23",
-      "link": "asdfasd",
-      "id": 11
+      "preco": "17.05",
+      "link": "http8"
     },
     {
+      "id": 12,
       "titulo": "Figma para prototipar telas",
       "instituicao": "Generation",
       "cargaHoraria": 4,
       "dataConclusao": "2022-11-03",
-      "preco": "22",
-      "link": "asfdasd",
-      "id": 12
+      "preco": "15",
+      "link": "http2"
+    },
+    {
+      "titulo": "JQuery em formulários",
+      "instituicao": "Fábrica",
+      "cargaHoraria": 21,
+      "dataConclusao": "2022-11-04",
+      "preco": "12",
+      "link": "http",
+      "id": 13
+    },
+    {
+      "titulo": "C - primeiros passos na programação",
+      "instituicao": " CSharped",
+      "cargaHoraria": 7,
+      "dataConclusao": "2022-11-01",
+      "preco": "7",
+      "link": "http",
+      "id": 14
     }
   ]
 }

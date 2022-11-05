@@ -12,32 +12,43 @@ export class CursoService {
 
   constructor(private http: HttpClient) {}
 
-  criarCurso(curso: Curso): Observable<Curso> {
+  criarCurso(curso: Curso): Observable<Curso>
+  {
     return this.http.post<Curso>(this.API, curso);
   }
 
-  listarCursosComPaginacao(pagina: number): Observable<Curso[]> {
+  listarCursosComPaginacaoAndFiltro(pagina: number, filtro: any): Observable<Curso[]>
+  {
     const itensPorPagina = 5;
     let params = new HttpParams().set("_page", pagina).set("_limit", itensPorPagina);
+
+    if(filtro.trim().length > 2)
+    {
+      params = params.set("q", filtro);
+    }
 
     return this.http.get<Curso[]>(this.API, { params: params });
   }
 
-  listarCursosSemPaginacao(): Observable<Curso[]> {
+  listarCursosSemPaginacao(): Observable<Curso[]>
+  {
     return this.http.get<Curso[]>(this.API);
   }
 
-  excluirCurso(id: number): Observable<Curso> {
+  excluirCurso(id: number): Observable<Curso>
+  {
     const url = `${this.API}/${id}`;
     return this.http.delete<Curso>(url);
   }
 
-  buscarCursoPorId(id: number): Observable<Curso> {
+  buscarCursoPorId(id: number): Observable<Curso>
+  {
     const url = `${this.API}/${id}`;
     return this.http.get<Curso>(url);
   }
 
-  editarCurso(curso: Curso): Observable<Curso> {
+  editarCurso(curso: Curso): Observable<Curso>
+  {
     const url = `${this.API}/${curso.id}`;
     return this.http.put<Curso>(url, curso);
   }

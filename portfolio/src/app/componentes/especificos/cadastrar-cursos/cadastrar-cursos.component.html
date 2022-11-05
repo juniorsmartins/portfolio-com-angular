@@ -8,7 +8,7 @@
 
     <div class="row">
       <form class="col s12" [formGroup]="formulario"> <!-- Formulário Reativo -->
-        <h2 class="center-align"><i class="material-icons">school</i> {{ chapeus.formulario }} </h2> <!-- Interpolation -->
+        <h2 class="center-align"><i class="material-icons">shield</i> {{ chapeus.formulario }} </h2> <!-- Interpolation -->
 
         <div class="row">
           <label for="titulo"> Titulo: </label>
@@ -65,7 +65,7 @@
         <div class="row">
             <label for="preco"> Preço: </label>
             <div class="input-field col s12">
-              <input id="preco" type="text" formControlName="preco" mask="separator.2" [thousandSeparator]="'.'" [decimalMarker]="'.'" [dropSpecialCharacters]="false" [showMaskTyped]="false"> <!-- Formulário Reativo -->
+              <input id="preco" type="text" formControlName="preco" mask="separator.2" [decimalMarker]="'.'" [dropSpecialCharacters]="false" [showMaskTyped]="false"> <!-- Formulário Reativo -->
             </div>
         </div>
 
@@ -113,11 +113,6 @@
     </div>
 
   </div>
-
-
-
-
-
 
 
   <!-- Compiled and minified JavaScript -->
