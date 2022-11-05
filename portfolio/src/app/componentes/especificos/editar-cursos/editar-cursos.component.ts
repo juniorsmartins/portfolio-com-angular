@@ -67,7 +67,7 @@ export class EditarCursosComponent implements OnInit {
   }
 
   limparFormularioDoCurso() {
-
+    this.formulario.reset();
   }
 
   cancelarFormularioDoCurso()

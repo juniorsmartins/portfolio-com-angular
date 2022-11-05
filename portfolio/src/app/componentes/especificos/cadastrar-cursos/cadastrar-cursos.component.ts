@@ -59,6 +59,6 @@ export class CadastrarCursosComponent implements OnInit {
   }
 
   limparFormularioDoCurso() {
-
+    this.formulario.reset();
   }
 }
