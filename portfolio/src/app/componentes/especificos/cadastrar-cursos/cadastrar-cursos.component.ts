@@ -46,9 +46,11 @@ export class CadastrarCursosComponent implements OnInit {
     })
   }
 
-  salvarCadastroDoCurso() {
-    console.log(this.formulario.get('titulo')?.errors);
-    if(this.formulario.valid) {
+  salvarCadastroDoCurso()
+  {
+    console.log(this.formulario.status);
+    if(this.formulario.valid)
+    {
       this.service.criarCurso(this.formulario.value).subscribe(() =>
       {
         this.router.navigate(['/listarCursos']);
@@ -59,5 +61,4 @@ export class CadastrarCursosComponent implements OnInit {
   limparFormularioDoCurso() {
 
   }
-
 }
