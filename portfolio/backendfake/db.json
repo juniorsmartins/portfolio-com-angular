@@ -100,15 +100,6 @@
       "link": "http2"
     },
     {
-      "titulo": "JQuery em formulários",
-      "instituicao": "Fábrica",
-      "cargaHoraria": 21,
-      "dataConclusao": "2022-11-04",
-      "preco": "12",
-      "link": "http",
-      "id": 13
-    },
-    {
       "titulo": "C - primeiros passos na programação",
       "instituicao": " CSharped",
       "cargaHoraria": 7,
@@ -116,6 +107,15 @@
       "preco": "7",
       "link": "http",
       "id": 14
+    },
+    {
+      "titulo": "Scala: para enorme fluxo de dados",
+      "instituicao": "Alura",
+      "cargaHoraria": 25,
+      "dataConclusao": "2022-11-07",
+      "preco": "75.15",
+      "link": "http2",
+      "id": 15
     }
   ]
 }

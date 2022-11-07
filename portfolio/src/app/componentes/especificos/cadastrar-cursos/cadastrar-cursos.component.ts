@@ -1,8 +1,5 @@
 import { CursoService } from './../curso.service';
-import * as M from 'materialize-css';
-
 import { Component, OnInit } from '@angular/core';
-import { Curso } from '../curso';
 import { Router } from '@angular/router';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
