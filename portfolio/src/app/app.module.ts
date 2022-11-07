@@ -16,6 +16,7 @@ import { ContatosComponent } from './componentes/atividade7-rodape/contatos/cont
 import { DashboardComponent } from './componentes/dashboard/dashboard.component';
 import { CalculadorComponent } from './componentes/dashboard/calculador/calculador.component';
 import { BotaoCarregarMaisItensComponent } from './componentes/especificos/listar-cursos/botao-carregar-mais-itens/botao-carregar-mais-itens.component';
+import { LoginComponent } from './componentes/login/login.component';
 
 const maskConfig: Partial<IConfig> = {
   validation: false,
@@ -34,7 +35,8 @@ const maskConfig: Partial<IConfig> = {
     ContatosComponent,
     DashboardComponent,
     CalculadorComponent,
-    BotaoCarregarMaisItensComponent
+    BotaoCarregarMaisItensComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,

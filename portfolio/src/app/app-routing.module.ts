@@ -1,3 +1,4 @@
+import { LoginComponent } from './componentes/login/login.component';
 import { DashboardComponent } from './componentes/dashboard/dashboard.component';
 import { ContatosComponent } from './componentes/atividade7-rodape/contatos/contatos.component';
 import { EditarCursosComponent } from './componentes/especificos/editar-cursos/editar-cursos.component';
@@ -10,8 +11,12 @@ import { RouterModule, Routes } from '@angular/router';
 const routes: Routes = [
   {
     path: '',
-    redirectTo: 'cadastrarCurso',
+    redirectTo: 'login',
     pathMatch: 'full'
+  },
+  {
+    path: 'login',
+    component: LoginComponent
   },
   {
     path: 'cadastrarCurso',
