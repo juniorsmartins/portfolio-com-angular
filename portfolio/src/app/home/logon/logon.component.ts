@@ -1,11 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-login',
-  templateUrl: './login.component.html',
-  styleUrls: ['./login.component.css']
+  selector: 'app-logon',
+  templateUrl: './logon.component.html',
+  styleUrls: ['./logon.component.css']
 })
-export class LoginComponent implements OnInit {
+export class LogonComponent implements OnInit {
 
   chapeus = {
     login: 'Security'
@@ -16,7 +16,7 @@ export class LoginComponent implements OnInit {
     senha: ''
   }
 
-  constructor() {}
+  constructor() {};
 
   ngOnInit(): void {}
 
@@ -37,4 +37,5 @@ export class LoginComponent implements OnInit {
     this.usuario.login = '',
     this.usuario.senha = ''
   }
+
 }

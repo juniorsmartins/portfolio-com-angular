@@ -3,15 +3,22 @@ import { CommonModule } from '@angular/common';
 
 import { HomeRoutingModule } from './home-routing.module';
 import { HomeComponent } from './home.component';
+import { LogonComponent } from './logon/logon.component';
 
 
-@NgModule({
+@NgModule
+({
   declarations: [
-    HomeComponent
+    HomeComponent,
+    LogonComponent
   ],
   imports: [
     CommonModule,
     HomeRoutingModule
+  ],
+  exports: [
+    HomeComponent
   ]
 })
-export class HomeModule { }
+export class HomeModule {}
+

@@ -5,11 +5,9 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './atividade7-cabecalho.component.html',
   styleUrls: ['./atividade7-cabecalho.component.css']
 })
-export class Atividade7CabecalhoComponent implements OnInit {
+export class Atividade7CabecalhoComponent implements OnInit
+{
+  constructor() {}
 
-  constructor() { }
-
-  ngOnInit(): void {
-  }
-
+  ngOnInit(): void {}
 }

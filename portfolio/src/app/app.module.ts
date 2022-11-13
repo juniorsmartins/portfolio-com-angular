@@ -16,14 +16,14 @@ import { ContatosComponent } from './componentes/atividade7-rodape/contatos/cont
 import { DashboardComponent } from './componentes/dashboard/dashboard.component';
 import { CalculadorComponent } from './componentes/dashboard/calculador/calculador.component';
 import { BotaoCarregarMaisItensComponent } from './componentes/especificos/listar-cursos/botao-carregar-mais-itens/botao-carregar-mais-itens.component';
-import { LoginComponent } from './componentes/login/login.component';
-import { HomeComponent } from './componentes/home/home.component';
+
 
 const maskConfig: Partial<IConfig> = {
   validation: false,
 };
 
-@NgModule({
+@NgModule
+({
   declarations: [
     AppComponent,
     Atividade7CabecalhoComponent,
@@ -36,9 +36,7 @@ const maskConfig: Partial<IConfig> = {
     ContatosComponent,
     DashboardComponent,
     CalculadorComponent,
-    BotaoCarregarMaisItensComponent,
-    LoginComponent,
-    HomeComponent
+    BotaoCarregarMaisItensComponent
   ],
   imports: [
     BrowserModule,
