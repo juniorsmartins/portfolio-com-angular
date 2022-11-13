@@ -28,15 +28,6 @@
       "link": "http4"
     },
     {
-      "id": 5,
-      "titulo": "Go Iniciante",
-      "instituicao": "Cubos Academy",
-      "cargaHoraria": 50,
-      "dataConclusao": "2022-11-01",
-      "preco": "40.25",
-      "link": "http7"
-    },
-    {
       "id": 6,
       "titulo": "Vue Iniciante",
       "instituicao": "Estudonauta",
