@@ -1,4 +1,8 @@
+import { Observable } from 'rxjs';
 import { Component, OnInit } from '@angular/core';
+import { UsuarioService } from './Usuario.service';
+import { Usuario } from './usuario';
+
 
 @Component({
   selector: 'app-login',
@@ -11,12 +15,17 @@ export class LoginComponent implements OnInit {
     login: 'Security'
   }
 
-  usuario = {
+  usuario: Usuario = {
     login: '',
     senha: ''
   }
 
-  constructor() {}
+  usuarios: Observable<Usuario[]> | undefined;
+
+  constructor
+  (
+    private service: UsuarioService
+  ) {}
 
   ngOnInit(): void {}
 
@@ -30,6 +39,10 @@ export class LoginComponent implements OnInit {
     console.log(localStorage.getItem('login')); // string
     console.log(localStorage.getItem('senha')); // string
 
+    console.log(this.usuario);
+    this.service.criar(this.usuario);
+    this.usuarios = this.service.lerTodos();
+
     this.limparFormulario();
   }
 
@@ -37,4 +50,6 @@ export class LoginComponent implements OnInit {
     this.usuario.login = '',
     this.usuario.senha = ''
   }
+
+
 }

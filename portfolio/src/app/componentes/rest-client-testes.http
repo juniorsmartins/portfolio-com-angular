@@ -1,0 +1,61 @@
+###
+http://localhost:3000/curso
+
+###
+http://localhost:3000/curso/2
+
+###
+POST http://localhost:3000/curso HTTP/1.1
+Content-Type: application/json
+
+{
+    "titulo": "Angular 14: requisição HTTP com Json Server",
+    "instituicao": "Dio",
+    "cargaHoraria": 21,
+    "dataConclusao": "2022-02-10",
+    "preco": "52.6",
+    "link": "http9"
+}
+
+###
+PUT http://localhost:3000/curso/1 HTTP/1.1
+Content-Type: application/json
+
+{
+    "titulo": "Python: requisição HTTP em Rest API",
+    "instituicao": "Kenzye Academy",
+    "cargaHoraria": 15,
+    "dataConclusao": "2022-01-05",
+    "preco": "25",
+    "link": "http10"
+}
+
+###
+DELETE http://localhost:3000/curso/6
+
+### 
+http://localhost:3000/usuario
+
+###
+http://localhost:3000/usuario/8
+
+###
+POST http://localhost:3000/usuario HTTP/1.1
+Content-Type: application/json
+
+{
+    "login": "Salvador",
+    "senha": "Calhado"
+}
+
+###
+PUT http://localhost:3000/usuario/8 HTTP/1.1
+Content-Type: application/json
+
+{
+    "login": "Maria Roberta",
+    "senha": "Lemos"
+}
+
+###
+DELETE http://localhost:3000/usuario/9

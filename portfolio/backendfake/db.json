@@ -1,13 +1,13 @@
 {
-  "curso": [
+  "cursos": [
     {
-      "id": 1,
-      "titulo": "Java Intermediário",
-      "instituicao": "Dio",
-      "cargaHoraria": 18,
-      "dataConclusao": "2022-10-31",
-      "preco": "12.1",
-      "link": "http2"
+      "titulo": "Python: requisição HTTP em Rest API",
+      "instituicao": "Kenzye Academy",
+      "cargaHoraria": 15,
+      "dataConclusao": "2022-01-05",
+      "preco": "25",
+      "link": "http10",
+      "id": 1
     },
     {
       "id": 2,
@@ -35,15 +35,6 @@
       "dataConclusao": "2022-11-01",
       "preco": "40.25",
       "link": "http7"
-    },
-    {
-      "id": 6,
-      "titulo": "Vue Iniciante",
-      "instituicao": "Estudonauta",
-      "cargaHoraria": 60,
-      "dataConclusao": "2022-11-02",
-      "preco": "25.18",
-      "link": "http8"
     },
     {
       "id": 7,
@@ -116,6 +107,22 @@
       "preco": "75.15",
       "link": "http2",
       "id": 15
+    },
+    {
+      "titulo": "Angular 14: requisição HTTP com Json Server",
+      "instituicao": "Dio",
+      "cargaHoraria": 21,
+      "dataConclusao": "2022-02-10",
+      "preco": "52.6",
+      "link": "http9",
+      "id": 16
+    }
+  ],
+  "usuarios": [
+    {
+      "login": "Maria Roberta",
+      "senha": "Lemos",
+      "id": 1
     }
   ]
 }
