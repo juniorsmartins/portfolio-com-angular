@@ -23,6 +23,7 @@ export class UsuarioService {
         reject('Senha inválida!');
       }
       setTimeout(() => {
+        console.log("SeTTimeOut do service para salvar Usuário.");
         this.http.post<Usuario>(this.API, usuario)
         resolve(usuario);
       }, 5);
@@ -32,7 +33,6 @@ export class UsuarioService {
 
   lerTodos(): Observable<Usuario[]>
   {
-    console.log("----- lerTodos -----")
     return this.http.get<Usuario[]>(this.API)
       .pipe(
         tap(usuario => console.log(usuario))
