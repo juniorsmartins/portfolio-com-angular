@@ -13,9 +13,21 @@ export class UsuarioService {
 
   constructor(private http: HttpClient) {}
 
-  criar(usuario: Usuario): Observable<Usuario>
+  criar(usuario: Usuario): Promise<Usuario>
   {
-    return this.http.post<Usuario>(this.API, usuario);
+    const promessa = new Promise<Usuario>((resolve, reject) => {
+      if(usuario.login == null || usuario.login == '') {
+        reject('Login inválido!');
+      }
+      if(usuario.senha == null || usuario.senha == '') {
+        reject('Senha inválida!');
+      }
+      setTimeout(() => {
+        this.http.post<Usuario>(this.API, usuario)
+        resolve(usuario);
+      }, 5);
+    })
+    return promessa;
   }
 
   lerTodos(): Observable<Usuario[]>

@@ -7,7 +7,8 @@ import { Usuario } from './usuario';
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
-  styleUrls: ['./login.component.css']
+  styleUrls: ['./login.component.css'],
+  providers: [ UsuarioService ]
 })
 export class LoginComponent implements OnInit {
 
@@ -15,12 +16,7 @@ export class LoginComponent implements OnInit {
     login: 'Security'
   }
 
-  usuario: Usuario = {
-    login: '',
-    senha: ''
-  }
-
-  usuarios: Observable<Usuario[]> | undefined;
+  usuario!: Usuario;
 
   constructor
   (
@@ -39,9 +35,15 @@ export class LoginComponent implements OnInit {
     console.log(localStorage.getItem('login')); // string
     console.log(localStorage.getItem('senha')); // string
 
-    console.log(this.usuario);
-    this.service.criar(this.usuario);
-    this.usuarios = this.service.lerTodos();
+    this.service.criar(this.usuario)
+      .then(() => {
+        console.log('Salvo com sucesso!');
+      }).catch((exception) => {
+        console.log(exception);
+      }).finally(() => {
+        console.log('Finalizada operação de salvamento!');
+      })
+
 
     this.limparFormulario();
   }
@@ -50,6 +52,5 @@ export class LoginComponent implements OnInit {
     this.usuario.login = '',
     this.usuario.senha = ''
   }
-
-
 }
+
