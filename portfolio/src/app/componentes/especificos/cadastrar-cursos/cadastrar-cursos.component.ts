@@ -3,6 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
+
 @Component({
   selector: 'app-cadastrar-cursos',
   templateUrl: './cadastrar-cursos.component.html',
@@ -45,7 +46,6 @@ export class CadastrarCursosComponent implements OnInit {
 
   salvarCadastroDoCurso()
   {
-    console.log(this.formulario.status);
     if(this.formulario.valid)
     {
       this.service.criarCurso(this.formulario.value).subscribe(() =>

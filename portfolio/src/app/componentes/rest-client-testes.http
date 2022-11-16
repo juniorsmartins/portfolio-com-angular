@@ -1,0 +1,61 @@
+###
+http://localhost:3000/cursos
+
+###
+http://localhost:3000/cursos/2
+
+###
+POST http://localhost:3000/cursos HTTP/1.1
+Content-Type: application/json
+
+{
+    "titulo": "Java: threads virtuais do Java 19",
+    "instituicao": "Estudonauta",
+    "cargaHoraria": 32,
+    "dataConclusao": "2022-01-25",
+    "preco": "150",
+    "link": "http10"
+}
+
+###
+PUT http://localhost:3000/cursos/14 HTTP/1.1
+Content-Type: application/json
+
+{
+    "titulo": "Python: requisição HTTP em Rest API",
+    "instituicao": "Kenzye Academy",
+    "cargaHoraria": 15,
+    "dataConclusao": "2022-01-05",
+    "preco": "25",
+    "link": "http10"
+}
+
+###
+DELETE http://localhost:3000/cursos/14
+
+###
+http://localhost:3000/usuarios
+
+###
+http://localhost:3000/usuarios/2
+
+###
+POST http://localhost:3000/usuarios HTTP/1.1
+Content-Type: application/json
+
+{
+    "login": "Bárbara Zumi",
+    "senha": "Plum"
+}
+
+###
+PUT http://localhost:3000/usuarios/3 HTTP/1.1
+Content-Type: application/json
+
+{
+    "login": "Louise Betina",
+    "senha": "Carvo"
+}
+
+###
+DELETE http://localhost:3000/usuarios/2

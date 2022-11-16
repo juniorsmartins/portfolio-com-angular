@@ -4,24 +4,48 @@
   <div class="row blue-grey darken-1 hoverable center-align white-text">
 
     <div class="row">
-      <span><i class="material-icons">security</i> {{ chapeus.login }}</span> <!-- Interpolation -->
+      <h3><i class="material-icons">security</i> {{ chapeus.login }}</h3> <!-- Interpolation -->
     </div>
-    <form class="col s12">
+    <form class="col s12" [formGroup]="formularioUsuario"> <!-- Formulário Reativo -->
       <div class="row">
         <div class="input-field col s6">
           <i class="material-icons prefix">account_circle</i>
-          <input id="icon_prefix" type="text" class="validate" name="login" [(ngModel)]="usuario.login"> <!-- Two-way Binding -->
+          <input id="icon_prefix" type="text" class="validate" formControlName="login"> <!-- Two-way Binding -->
           <label for="icon_prefix">Login</label>
+          <div class="mensagem__erro" *ngIf="formularioUsuario.get('login')?.errors?.['required'] && formularioUsuario.get('login')?.touched">
+            Campo obrigatório!
+          </div>
+          <div class="mensagem__erro" *ngIf="formularioUsuario.get('login')?.errors?.['pattern']">
+            Não permite campo vazio!
+          </div>
+          <div class="mensagem__erro" *ngIf="formularioUsuario.get('login')?.errors?.['minlength']">
+            Limite mínimo de cinco caracteres.
+          </div>
+          <div class="mensagem__erro" *ngIf="formularioUsuario.get('login')?.errors?.['maxlength']">
+            Limite máximo de 50 caracteres.
+          </div>
         </div>
         <div class="input-field col s6">
           <i class="material-icons prefix">https</i>
-          <input id="icon_password" type="password" class="validate" name="senha" [(ngModel)]="usuario.senha"> <!-- Two-way Binding -->
+          <input id="icon_password" type="password" class="validate" formControlName="senha"> <!-- Two-way Binding -->
           <label for="icon_password">Senha</label>
+          <div class="mensagem__erro" *ngIf="formularioUsuario.get('senha')?.errors?.['required'] && formularioUsuario.get('senha')?.touched">
+            Campo obrigatório!
+          </div>
+          <div class="mensagem__erro" *ngIf="formularioUsuario.get('senha')?.errors?.['pattern']">
+            Não permite campo vazio!
+          </div>
+          <div class="mensagem__erro" *ngIf="formularioUsuario.get('senha')?.errors?.['minlength']">
+            Limite mínimo de cinco caracteres.
+          </div>
+          <div class="mensagem__erro" *ngIf="formularioUsuario.get('senha')?.errors?.['maxlength']">
+            Limite máximo de 150 caracteres.
+          </div>
         </div>
       </div>
       <div class="row">
         <div class="input-field col s12">
-          <button (click)="salvarLoginLocalStorage()" type="button" class="waves-effect waves-light btn-small"><i class="material-icons left">save</i>Entrar</button> <!-- Event Binding -->
+          <button (click)="salvarUsuarioNoLocalStorage()" type="button" [disabled]="!formularioUsuario.valid" class="waves-effect waves-light btn-small"><i class="material-icons left">save</i>Entrar</button> <!-- Event Binding -->
         </div>
       </div>
       <div class="row">

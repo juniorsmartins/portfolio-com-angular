@@ -3,12 +3,13 @@ import { HttpClient, HttpParams } from '@angular/common/http';
 import { Curso } from './curso';
 import { Observable } from 'rxjs';
 
+
 @Injectable({
   providedIn: 'root'
 })
 export class CursoService {
 
-  private readonly API = 'http://localhost:3000/curso';
+  private readonly API = 'http://localhost:3000/cursos';
 
   constructor(private http: HttpClient) {}
 
@@ -53,4 +54,5 @@ export class CursoService {
     return this.http.put<Curso>(url, curso);
   }
 }
+
 
