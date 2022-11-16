@@ -9,7 +9,7 @@ import { Usuario } from './usuario';
 })
 export class UsuarioService {
 
-  private readonly API = 'http://localhost:3000/usuarios';
+  private readonly API_USUARIOS = 'http://localhost:3000/usuarios';
 
   constructor(private http: HttpClient) {}
 
@@ -22,18 +22,17 @@ export class UsuarioService {
       if(usuario.senha == null || usuario.senha == '') {
         reject('Senha inválida!');
       }
-      setTimeout(() => {
-        console.log("SeTTimeOut do service para salvar Usuário.");
-        this.http.post<Usuario>(this.API, usuario)
-        resolve(usuario);
-      }, 5);
+      console.log("Service - Salvar Usuário no JsonServer.");
+      console.log("Login: " + usuario.login);
+      this.http.post<Usuario>(this.API_USUARIOS, usuario);
+      resolve(usuario);
     })
     return promessa;
   }
 
   lerTodos(): Observable<Usuario[]>
   {
-    return this.http.get<Usuario[]>(this.API)
+    return this.http.get<Usuario[]>(this.API_USUARIOS)
       .pipe(
         tap(usuario => console.log(usuario))
       );
