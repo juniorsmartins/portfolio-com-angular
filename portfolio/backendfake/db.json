@@ -133,6 +133,36 @@
       "login": "Bárbara Zumi",
       "senha": "Plum",
       "id": 4
+    },
+    {
+      "login": "RogerWaters",
+      "senha": "PinkFloyd",
+      "id": 5
+    },
+    {
+      "login": "LudwigVonMisses",
+      "senha": "Von123",
+      "id": 6
+    },
+    {
+      "login": "EricEvans",
+      "senha": "ee123",
+      "id": 7
+    },
+    {
+      "login": "RobertMartin",
+      "senha": "uncleBob",
+      "id": 8
+    },
+    {
+      "login": "RobertSchildt",
+      "senha": "rs123",
+      "id": 9
+    },
+    {
+      "login": "AdamSmith",
+      "senha": "RiquezaDasNacoes",
+      "id": 10
     }
   ]
 }

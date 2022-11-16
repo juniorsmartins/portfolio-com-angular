@@ -1,6 +1,7 @@
 import { UsuarioService } from './Usuario.service';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Usuario } from './usuario';
 
 
 @Component({
@@ -14,6 +15,8 @@ export class LoginComponent implements OnInit {
   chapeus = {
     login: 'Security'
   }
+
+  listaDeUsuarios: Usuario[] = [];
 
   formularioUsuario!: FormGroup;
 
@@ -42,8 +45,9 @@ export class LoginComponent implements OnInit {
 
   salvarUsuarioNoLocalStorage() {
     if(this.formularioUsuario.valid) {
+      console.log("\n----- Início das operações de Salvar Usuário no Storage e de Criar Usuário no Json Server -----");
       localStorage.setItem("usuario", JSON.stringify(this.formularioUsuario.value));
-      console.log("----- Salvar Usuário no Storage: " + localStorage.getItem('usuario'));
+      console.log("----- Concluído salvar Usuário no Storage -----")
 
 //      localStorage.setItem("usuario2", JSON.stringify({login: this.usuario.login, senha: this.usuario.senha}));
 //      localStorage.setItem('login', this.usuario.login);
@@ -54,25 +58,38 @@ export class LoginComponent implements OnInit {
 //      console.log(localStorage.getItem('senha')); // string
 
       this.salvarUsuarioNoJsonServer();
-      this.limparFormulario();
     }
   }
 
   salvarUsuarioNoJsonServer() {
+    console.log("\n----- Usuário será Criado no Json Server -----");
     if(this.formularioUsuario.valid) {
       this.service.criar(this.formularioUsuario.value)
       .then(() => {
-        console.log('Login - Tratamento Then!');
+        console.log('----- Usuário Criado com sucesso! -----');
       }).catch((exception) => {
         console.log(exception);
       }).finally(() => {
-        console.log('Finalizada operação Save!');
+        console.log('----- Finally - Fim operação Criar! -----');
+        this.limparFormulario();
+        this.listarUsuariosSemPaginacao();
       })
     }
   }
 
   limparFormulario() {
     this.formularioUsuario.reset();
+    console.log('\n----- Formulário limpo! -----\n')
+  }
+
+  listarUsuariosSemPaginacao() {
+    this.service.lerTodos()
+      .then((data) => this.listaDeUsuarios = data)
+      .catch((e) => console.log(e))
+      .finally(() => {
+        console.log('\n----- Lista de Usuário no Json Server -----');
+        this.listaDeUsuarios.forEach((usuario) => console.log(usuario));
+      });
   }
 }
 

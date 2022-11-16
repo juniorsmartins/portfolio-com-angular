@@ -1,5 +1,5 @@
-import { Observable, tap } from 'rxjs';
-import { Injectable } from '@angular/core';
+import { Observable, ReplaySubject, tap } from 'rxjs';
+import { Injectable, resolveForwardRef } from '@angular/core';
 import { HttpClient, HttpParams } from '@angular/common/http';
 import { Usuario } from './usuario';
 
@@ -15,27 +15,16 @@ export class UsuarioService {
 
   criar(usuario: Usuario): Promise<Usuario>
   {
-    const promessa = new Promise<Usuario>((resolve, reject) => {
-      if(usuario.login == null || usuario.login == '') {
-        reject('Login inválido!');
-      }
-      if(usuario.senha == null || usuario.senha == '') {
-        reject('Senha inválida!');
-      }
-      console.log("Service - Salvar Usuário no JsonServer.");
-      console.log("Login: " + usuario.login);
-      this.http.post<Usuario>(this.API_USUARIOS, usuario);
-      resolve(usuario);
-    })
-    return promessa;
+    return new Promise<Usuario>((resolve, reject) =>
+      this.http.post<Usuario>(this.API_USUARIOS, usuario).subscribe(data => resolve(data), (e:any) => reject(e))
+    );
   }
 
-  lerTodos(): Observable<Usuario[]>
+  lerTodos(): Promise<Usuario[]>
   {
-    return this.http.get<Usuario[]>(this.API_USUARIOS)
-      .pipe(
-        tap(usuario => console.log(usuario))
-      );
+    return new Promise<Usuario[]>((resolve, reject) =>
+      this.http.get<Usuario[]>(this.API_USUARIOS).subscribe(data => resolve(data), (e: any) => reject(e))
+    );
   }
 }
 
