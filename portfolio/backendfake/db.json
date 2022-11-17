@@ -55,15 +55,6 @@
       "link": "http6"
     },
     {
-      "id": 9,
-      "titulo": "JavaScript para back-end",
-      "instituicao": "Rocketseat",
-      "cargaHoraria": 43,
-      "dataConclusao": "2022-11-02",
-      "preco": "24.58",
-      "link": "http4"
-    },
-    {
       "id": 10,
       "titulo": "Android Java - meu primeiro app mobile",
       "instituicao": "Coursera",
@@ -80,15 +71,6 @@
       "dataConclusao": "2022-10-31",
       "preco": "17.05",
       "link": "http8"
-    },
-    {
-      "id": 12,
-      "titulo": "Figma para prototipar telas",
-      "instituicao": "Generation",
-      "cargaHoraria": 4,
-      "dataConclusao": "2022-11-03",
-      "preco": "15",
-      "link": "http2"
     },
     {
       "titulo": "C - primeiros passos na programação",
@@ -116,6 +98,15 @@
       "preco": "52.6",
       "link": "http9",
       "id": 16
+    },
+    {
+      "titulo": "Java: API Rest com Quarkus e Jakarta",
+      "instituicao": "Live University",
+      "cargaHoraria": 80,
+      "dataConclusao": "2022-11-17",
+      "preco": "100",
+      "link": "http20",
+      "id": 17
     }
   ],
   "usuarios": [
@@ -163,6 +154,11 @@
       "login": "AdamSmith",
       "senha": "RiquezaDasNacoes",
       "id": 10
+    },
+    {
+      "login": "Terezo",
+      "senha": "Maliner",
+      "id": 11
     }
   ]
 }
