@@ -1,10 +1,6 @@
 # 1. Projeto
 
-<<<<<<< HEAD
-O projeto consiste em atividade avaliativa à disciplina "Frameworks Web", ministrada no curso de Pós-graduação Lato Sensu (especialização) em Tecnologia Java, na UTFPR (Universidade Tecnológica Federal do Paraná). Logo, é construído para atender aos requisitos elencados pelo professor da disciplina. E, nessa linha, será uma aplicação para "Gerenciamento de cursos/certificados" de portfólio profissional. 
-=======
 O projeto consiste em atividade avaliativa à disciplina "Frameworks Web", ministrada no curso de Pós-graduação Lato Sensu (especialização) em Tecnologia Java, oferecido pela UTFPR (Universidade Tecnológica Federal do Paraná). Logo, é construído para atender aos requisitos elencados pelo professor da disciplina. E, nessa linha, será aplicação para "Gerenciamento de cursos/certificados" de portfólio profissional. 
->>>>>>> develop
 
 O projeto está armazenado na pasta intitulada: Portfolio. Todas as demais pastas não possuem relação direta, mas serviram para estudo de assuntos correlatos e, por conta disso, foram arquivados conjuntamente.
 
@@ -32,9 +28,9 @@ Link Design - https://www.figma.com/file/3tb1IBOZiVJHYP3WLrFlcp/DesignPortfolio?
 - [x] Passar dados entre componentes que representam diferentes telas via parâmetros de rotas;
 - [x] Validar campos do formulário com REGEX e apresentar os erros;
 - [x] Desabilitar o botão de submit enquanto o formulário está inválido;
-- [ ] Fazer requisições a API com tratamento da resposta com Promises ou Observables;
+- [x] Fazer requisições a API com tratamento da resposta com Promises ou Observables;
 - [x] Cadastrar uma entidade usando uma API (JSON Server);
 - [x] Apresentar uma lista de dados com a diretiva estrutural ngFor;
 - [x] Usar a diretiva ngIf;
-- [ ] Formatar a apresentação de dados com Pipes;
+- [x] Formatar a apresentação de dados com Pipes;
 - [ ] Build e deploy da aplicação.
