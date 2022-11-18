@@ -7,8 +7,6 @@ import { Component, OnInit, Output } from '@angular/core';
 })
 export class DashboardComponent implements OnInit {
 
-  @Output() totalCursosPai = 0;
-
   @Output() painelKPIPai = {
     totalCursos: 0,
     totalCargaHoraria: 0,
@@ -17,6 +15,6 @@ export class DashboardComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit(): void {}
+  ngOnInit(): void { }
 }
 
