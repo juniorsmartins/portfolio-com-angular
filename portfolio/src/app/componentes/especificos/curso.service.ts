@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
-import { HttpClient, HttpParams } from '@angular/common/http';
+import { HttpClient, HttpErrorResponse, HttpParams } from '@angular/common/http';
 import { Curso } from './curso';
-import { Observable } from 'rxjs';
+import { catchError, Observable, retry, throwError } from 'rxjs';
 
 
 @Injectable({
@@ -10,6 +10,8 @@ import { Observable } from 'rxjs';
 export class CursoService {
 
   private readonly API = 'http://localhost:3000/cursos';
+
+  errorsMsg!: string;
 
   constructor(private http: HttpClient) {}
 
@@ -33,7 +35,36 @@ export class CursoService {
 
   listarCursosSemPaginacao(): Observable<Curso[]>
   {
-    return this.http.get<Curso[]>(this.API);
+    return this.http.get<Curso[]>(this.API)
+      .pipe(
+        retry(2),
+        catchError(error => {
+          this.errorsMsg = '';
+          if(error.error instanceof ErrorEvent) {
+            this.errorsMsg = 'Erro lançado pelo lado do cliente.';
+          } else {
+            this.errorsMsg = this.getServerErrorMessage(error);
+          }
+          return throwError(this.errorsMsg);
+        })
+      );
+  }
+
+  private getServerErrorMessage(error: HttpErrorResponse): string {
+    switch(error.status) {
+      case 404: {
+        return "Cursos não encontrados!";
+      }
+      case 403: {
+        return "Acesso negado!";
+      }
+      case 500: {
+        return "Erro interno do servidor.";
+      }
+      default: {
+        return "Erro desconhecido do servidor";
+      }
+    }
   }
 
   excluirCurso(id: number): Observable<Curso>
@@ -54,5 +85,4 @@ export class CursoService {
     return this.http.put<Curso>(url, curso);
   }
 }
-
 
