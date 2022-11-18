@@ -7,11 +7,11 @@
           <span class="card-title center-align">Curso</span>
           <div class="left-align">
             <p> <span class="deep-orange-text">ID:</span> {{ this.curso.id }} </p> <!-- Interpolation -->
-            <p> <span class="deep-orange-text">Título:</span> {{ this.curso.titulo }} </p> <!-- Interpolation -->
-            <p> <span class="deep-orange-text">Instituição:</span> {{ this.curso.instituicao }} </p> <!-- Interpolation -->
-            <p> <span class="deep-orange-text">Data de Conclusão:</span> {{ this.curso.dataConclusao }} </p> <!-- Interpolation -->
+            <p> <span class="deep-orange-text">Título:</span> {{ this.curso.titulo | titlecase }} </p> <!-- Interpolation -->
+            <p> <span class="deep-orange-text">Instituição:</span> {{ this.curso.instituicao | uppercase }} </p> <!-- Interpolation + Pipe -->
+            <p> <span class="deep-orange-text">Data de Conclusão:</span> {{ this.curso.dataConclusao | date }} </p> <!-- Interpolation -->
             <p> <span class="deep-orange-text">Carga Horária:</span> {{ this.curso.cargaHoraria }} </p> <!-- Interpolation -->
-            <p> <span class="deep-orange-text">Preço:</span> {{ this.curso.preco }} </p> <!-- Interpolation -->
+            <p> <span class="deep-orange-text">Preço:</span> {{ this.curso.preco | currency:'BRL':true }} </p> <!-- Interpolation -->
             <p> <span class="deep-orange-text">Link da certificação:</span> {{ this.curso.link }} </p> <!-- Interpolation -->
           </div>
         </div>

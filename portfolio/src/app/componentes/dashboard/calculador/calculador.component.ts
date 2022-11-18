@@ -1,6 +1,7 @@
+import { catchError, empty, Observable } from 'rxjs';
 import { CursoService } from './../../especificos/curso.service';
 import { Component, Input, OnInit } from '@angular/core';
-import { Curso } from './../../especificos/curso';
+
 
 @Component({
   selector: 'app-calculador',
@@ -9,31 +10,31 @@ import { Curso } from './../../especificos/curso';
 })
 export class CalculadorComponent implements OnInit {
 
-  @Input() totalCursosFilho!: number;
-
   @Input() painelKPIFilho = {
-    totalCursos: 10,
-    totalCargaHoraria: 10,
-    totalPreco: 10
+    totalCursos: 0,
+    totalCargaHoraria: 0,
+    totalPreco: 0
   }
-
-  listaDeCursos: Curso[] = [];
-  paginaAtual: number = 1;
 
   constructor(private service: CursoService)  {}
 
   ngOnInit(): void {
-    this.service.listarCursosSemPaginacao().subscribe((listaDeCursos) => {
-      this.listaDeCursos = listaDeCursos;
-      this.totalCursosFilho = listaDeCursos.length;
 
-      this.painelKPIFilho.totalCursos = listaDeCursos.length;
-      this.painelKPIFilho.totalCargaHoraria = 0;
-      this.painelKPIFilho.totalPreco = 0;
-      for (let index = 0; index < listaDeCursos.length; index++) {
-        this.painelKPIFilho.totalCargaHoraria += listaDeCursos[index].cargaHoraria;
-        this.painelKPIFilho.totalPreco += parseFloat(listaDeCursos[index].preco);
-      }
-    });
+    this.service.listarCursosSemPaginacao()
+      .pipe(
+        catchError(error => {
+          console.log('Tratamento: ' + error);
+          return empty();
+        })
+      ).subscribe((lista$) => {
+        this.painelKPIFilho.totalCursos = lista$.length;
+        this.painelKPIFilho.totalCargaHoraria = 0;
+        this.painelKPIFilho.totalPreco = 0;
+        for(let indice = 0; indice < lista$.length; indice++) {
+          this.painelKPIFilho.totalCargaHoraria += lista$[indice].cargaHoraria;
+          this.painelKPIFilho.totalPreco += parseFloat(lista$[indice].preco);
+        }
+      });
   }
 }
+
