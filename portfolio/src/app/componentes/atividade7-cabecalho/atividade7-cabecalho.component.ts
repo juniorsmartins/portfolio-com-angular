@@ -9,7 +9,6 @@ export class Atividade7CabecalhoComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit(): void {
-  }
-
+  ngOnInit(): void { }
 }
+

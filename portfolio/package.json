@@ -8,7 +8,7 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "deploy:ghdocs": "ng build --output-path docs --base-href /portfolio-com-angular/portfolio/"
+    "deploy:ghdocs": "ng build --output-path docs --base-href /portfolio-com-angular/"
   },
   "engines": {
     "node": "16.17.0",
