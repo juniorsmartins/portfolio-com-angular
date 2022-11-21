@@ -5,9 +5,7 @@
     "ng": "ng",
     "start": "node server",
     "build": "ng build",
-    "test": "ng test",
-    "lint": "ng lint",
-    "e2e": "ng e2e"
+    "test": "ng test"
   },
   "engines": {
     "node": "16.17.0",
